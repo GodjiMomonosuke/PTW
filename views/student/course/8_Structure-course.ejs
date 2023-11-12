@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <title>Structure</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+    <!-- LEFT -->
+    <%- include('../layouts/course-list') %>
+    <!-- END OF LEFT-->
+
+    <!-- MIDDLE 1 -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .breadcrumb {
+            margin-bottom: 0;
+            background-color: white;
+            }
+        .blockquote-footer {
+            color:black;
+        }
+    </style>
+    <a id="Token"></a>
+    <!-- MIDDLE 1 -->
+    <div class="content">
+        <div id = "content" class="container">
+    <!--   C Language -->
+            <div class="accordion" id="accordionParentSyntax">
+                <!--   Token -->
+                <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                    <h1 >Structure</h1>
+                    <!--   ## -->
+                    <div class="box bg-light  mb-5 shadow" >
+                        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                            <h1 id = ''> What is a structure? </h1>
+                            <br>โครงสร้างคือคำสำคัญที่สร้างชนิดข้อมูลที่กำหนดโดยผู้ใช้ใน C/C++ โครงสร้างสร้างชนิดข้อมูลที่สามารถใช้เพื่อจัดกลุ่มรายการที่อาจต่างกันเป็นประเภทเดียว<br>
+                            <img src="https://drive.google.com/uc?id=1yYa44lLj7od54hruxSOXlAadhGKhzUHW" width="600" height="400">
+                            <h5><br>How to create a structure?<br></h5>
+                            <br>คีย์เวิร์ด 'struct' ใช้ในการสร้างโครงสร้าง ต่อไปนี้เป็นตัวอย่าง<br>
+                            <img src="https://drive.google.com/uc?id=1N1vxUigYOiHctf3beag0q7VgxEOrg0Ja">
+                            <h5><br>How to declare structure variables?<br></h5>
+                            <br>ตัวแปรโครงสร้างสามารถประกาศได้ด้วยการประกาศโครงสร้างหรือเป็นการประกาศแยกต่างหากเช่นประเภทพื้นฐาน<br>
+                            <img src="https://drive.google.com/uc?id=1NUf9tWlPtQJnB4vERNg2zndIEKUA83TI">
+                            <br>How to initialize structure members? <br>
+                            <br>สมาชิกโครงสร้างไม่สามารถเริ่มต้นได้ด้วยการประกาศ ตัวอย่างเช่น โปรแกรม C ต่อไปนี้ล้มเหลวในการคอมไพล์<br>
+                            <img src="https://drive.google.com/uc?id=1jB97FnrlCQLGnJqmi9tGTXfedLN8xE_1">
+                            <br>สาเหตุของข้อผิดพลาดข้างต้นนั้นง่ายมาก เมื่อมีการประกาศประเภทข้อมูล จะไม่มีการจัดสรรหน่วยความจำให้ หน่วยความจำจะถูกจัดสรรเฉพาะเมื่อมีการสร้างตัวแปร สมาชิกโครงสร้างสามารถเริ่มต้นได้โดยใช้วงเล็บปีกกา '{}' ตัวอย่างเช่น ต่อไปนี้เป็นการเริ่มต้นที่ถูกต้อง<br>
+                            <img src="https://drive.google.com/uc?id=1Vs1xg6TS3iajXBv6L3FtzoudzmmpvH22">
+                            <h5><br>How to access structure elements?<br></h5>
+                            <br>สมาชิกโครงสร้างสามารถเข้าถึงได้โดยใช้ operator (.)<br>
+                            <img src="https://drive.google.com/uc?id=1-WNGGBpiHxqoOSYO_NTWAsLmCX1nx4gc">
+                            <br>Output<br>
+                            <img src="https://drive.google.com/uc?id=1jFkiaUq0TSL10cn2dFnFBNjP7-dyRFS3">
+                            <br><br>
+                            <iframe width="480" height="320" src="https://www.youtube.com/embed/zmRxC7gYw-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <BR id="Semicolons">
+                        </div>
+                    </div>
+            <br ></div>
+
+        <button onclick="window.location.href='/course-Structure-quiz'" type="button" class="btn btn-outline-secondary btn-lg btn-block bg-light shadow" style="color:black" ><h2><u>แบบทดสอบย่อย</h2></u></button>
+        
+
+        
+
+        <br></div>
+        </div>
+    </div>
+
+
+    <!-- END Of MIDDLE  -->
+    </body>
+</html>
+
+

@@ -1,0 +1,230 @@
+<h1>Student</h1>
+    <div class="box bg-light  mb-5 shadow" >
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" class="col-1">#</th>
+                <th scope="col-1" class="col-4">Name</th>
+                <th scope="col-1" class="col-1">Class</th>
+                <th scope="col" class="col-2 text-start">Project (4)</th>
+                <th scope="col" class="col-2 text-start"> Score</th>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+
+
+                <% 
+                    if(Object.keys(Studentresult).length === 1) {   
+                        %>
+                            <th scope="row">1</th>
+                            <td><%=Studentresult[0].email %></td>
+                            <td><%=Studentresult[0].ClassName %></td>
+                            <td class="text-start">
+                                TicTacToe | <%=Studentresult[0].TicTacToe %> <br>
+                                Library System | <%=Studentresult[0].LibrarySystem %> <br> 
+                                Roshambo | <%=Studentresult[0].Roshambo %> <br>
+                                Calculator | <%=Studentresult[0].Calculator %> <br> 
+                                Calendar | <%=Studentresult[0].Calendar %> <br>
+                              
+                            </td>
+                            <td class="text-start">
+                                <% if(Studentresult[0].infoPrePostTest != undefined){ %>
+                                    
+                                    <u><%=Studentresult[0].infoPrePostTest[0].Name[0] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Introduction %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[0].infoPrePostTest[1].Pre[0] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[0].infoPrePostTest[2].Post[0] %> <br>
+
+                                    <u><%=Studentresult[0].infoPrePostTest[0].Name[1] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].DataType  %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[0].infoPrePostTest[1].Pre[1] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[0].infoPrePostTest[2].Post[1] %> <br>
+
+                                    <u><%=Studentresult[0].infoPrePostTest[0].Name[2] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Operators %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[0].infoPrePostTest[1].Pre[2] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[0].infoPrePostTest[2].Post[2] %> <br>
+
+                                    <u><%=Studentresult[0].infoPrePostTest[0].Name[3] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].FlowControl %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[0].infoPrePostTest[1].Pre[3] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[0].infoPrePostTest[2].Post[3] %> <br>
+
+                                    <u><%=Studentresult[0].infoPrePostTest[0].Name[4] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Loop %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[0].infoPrePostTest[1].Pre[4] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[0].infoPrePostTest[2].Post[4] %> <br>
+
+                                    <u><%=Studentresult[0].infoPrePostTest[0].Name[5] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Array  %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[0].infoPrePostTest[1].Pre[5] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[0].infoPrePostTest[2].Post[5] %> <br>
+
+                                    <u><%=Studentresult[0].infoPrePostTest[0].Name[6] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].InputOutput  %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[0].infoPrePostTest[1].Pre[6] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[0].infoPrePostTest[2].Post[6] %> <br>
+
+                                    <u><%=Studentresult[0].infoPrePostTest[0].Name[7] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Pointers  %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[0].infoPrePostTest[1].Pre[7] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[0].infoPrePostTest[2].Post[7] %> <br>
+
+                                    <u><%=Studentresult[0].infoPrePostTest[0].Name[8] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].String   %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[0].infoPrePostTest[1].Pre[8] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[0].infoPrePostTest[2].Post[8] %> <br>
+
+                                    <u><%=Studentresult[0].infoPrePostTest[0].Name[9] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Structure   %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[0].infoPrePostTest[1].Pre[9] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[0].infoPrePostTest[2].Post[9] %> <br>
+
+                                    <u><%=Studentresult[0].infoPrePostTest[0].Name[10] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Function  %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[0].infoPrePostTest[1].Pre[10] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[0].infoPrePostTest[2].Post[10] %> <br>
+                                    
+                                <% } else{ %>  
+                                    Introduction :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Introduction %> <br>
+                                    String :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].String %> <br>
+                                    Datatype :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Datatype %> <br> 
+                                    Operators :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Operators %> <br>
+                                    Selection  :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].FlowControl %> <br> 
+                                    Loop  :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Loop %> <br> 
+                                    Pointers :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Pointers %> <br>
+                                    Function : 
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Function %> <br>
+                                    Structure : 
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Structure %> <br> 
+                                    Array : 
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Array %> <br>
+                                    
+                                <% } %>
+                               
+                            </td>
+
+                        <%
+                    } 
+                    else {
+                        for (let i = 0; i < Object.keys(Studentresult).length; i++) {   
+                            %>
+                            
+     
+                                <th scope="row"><%=i+1%></th>
+                                <td><%=Studentresult[i].email %></td>
+                                <td><%=Studentresult[i].ClassName %></td>
+                                <td class="text-end">
+                                    TicTacToe | <%=Studentresult[i].TicTacToe %> <br>
+                                    Library System | <%=Studentresult[i].LibrarySystem %> <br> 
+                                    Roshambo | <%=Studentresult[i].Roshambo %> <br>
+                                    Calculator | <%=Studentresult[i].Calculator %> <br> 
+                                    Calendar | <%=Studentresult[i].Calendar %> <br>
+                                
+                                </td>
+                                <td class="text-end">
+                                    <% if(Studentresult[i].infoPrePostTest != undefined){ %>
+                                    
+                                    <u><%=Studentresult[i].infoPrePostTest[0].Name[0] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].Introduction %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[i].infoPrePostTest[1].Pre[0] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[i].infoPrePostTest[2].Post[0] %> <br>
+
+                                    <u><%=Studentresult[i].infoPrePostTest[0].Name[1] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].DataType  %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[i].infoPrePostTest[1].Pre[1] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[i].infoPrePostTest[2].Post[1] %> <br>
+
+                                    <u><%=Studentresult[i].infoPrePostTest[0].Name[2] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].Operators %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[i].infoPrePostTest[1].Pre[2] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[i].infoPrePostTest[2].Post[2] %> <br>
+
+                                    <u><%=Studentresult[i].infoPrePostTest[0].Name[3] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].FlowControl %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[i].infoPrePostTest[1].Pre[3] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[i].infoPrePostTest[2].Post[3] %> <br>
+
+                                    <u><%=Studentresult[i].infoPrePostTest[0].Name[4] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].Loop %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[i].infoPrePostTest[1].Pre[4] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[i].infoPrePostTest[2].Post[4] %> <br>
+
+                                    <u><%=Studentresult[i].infoPrePostTest[0].Name[5] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].Array  %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[i].infoPrePostTest[1].Pre[5] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[i].infoPrePostTest[2].Post[5] %> <br>
+
+                                    <u><%=Studentresult[i].infoPrePostTest[0].Name[6] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].InputOutput  %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[i].infoPrePostTest[1].Pre[6] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[i].infoPrePostTest[2].Post[6] %> <br>
+
+                                    <u><%=Studentresult[i].infoPrePostTest[0].Name[7] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].Pointers  %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[i].infoPrePostTest[1].Pre[7] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[i].infoPrePostTest[2].Post[7] %> <br>
+
+                                    <u><%=Studentresult[i].infoPrePostTest[0].Name[8] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].String   %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[i].infoPrePostTest[1].Pre[8] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[i].infoPrePostTest[2].Post[8] %> <br>
+
+                                    <u><%=Studentresult[i].infoPrePostTest[0].Name[9] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].Structure   %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[i].infoPrePostTest[1].Pre[9] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[i].infoPrePostTest[2].Post[9] %> <br>
+
+                                    <u><%=Studentresult[i].infoPrePostTest[0].Name[10] %></u> :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].Function  %> <br>
+                                    &nbsp &nbspPre Test | <%=Studentresult[i].infoPrePostTest[1].Pre[10] %> <br>
+                                    &nbsp &nbspPost Test | <%=Studentresult[i].infoPrePostTest[2].Post[10] %> <br>
+                                    
+                                <% } else{ %>  
+                                    Introduction :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].Introduction %> <br>
+                                    String :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].String %> <br>
+                                    Datatype :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].Datatype %> <br> 
+                                    Operators :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].Operators %> <br>
+                                    Selection  :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].FlowControl %> <br> 
+                                    Loop  :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].Loop %> <br> 
+                                    Pointers :
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].Pointers %> <br>
+                                    Function : 
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].Function %> <br>
+                                    Structure : 
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].Structure %> <br> 
+                                    Array : 
+                                    <br> &nbsp &nbspQuiz | <%=Studentresult[i].Array %> <br>
+                                    
+                                <% } %>
+                               
+                            </td>
+
+                
+                                </tr>
+
+
+                            <%
+                        } 
+                    }
+                %>
+
+                
+                
+            </tbody>
+        </table>
+    </div>

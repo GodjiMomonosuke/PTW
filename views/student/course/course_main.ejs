@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <title>Course</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+<!-- LEFT -->
+<%- include('../layouts/course-list') %>
+<!-- END OF LEFT-->
+    
+    
+ 
+<div class="content">
+
+
+<!-- RECOMMENDATION-->
+<% if (Object.keys(RecommendaResult).length !== 0 && RecommendaResult[0].RecommendCourse != "null"  ) { %>
+    <%- include('../layouts/recommendation') %>
+<% } else { %>
+<% } %>
+
+<!-- POSTTEST  -->
+<% if (PostTestDone === 1) { %><%- include('../layouts/post-test') %><% }%>
+<!-- END Of POSTTEST  -->
+
+<!-- MIDDLE 1 -->
+<%- include('../layouts/course-middle') %>
+
+<!-- END Of MIDDLE  -->
+<!-- MIDDLE 2 -->
+<%- include('../layouts/course-middle_Score') %>
+<!-- END Of MIDDLE  -->
+
+
+
+
+<!-- Recommendation -->
+<div class="modal fade" id="RecommendSetting" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Recommendation Setting</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="/Recommendation_setting" method="post" autocomplete="off">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <b>เส้นทางตาม Course ที่ทำ</b>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RecommendationSetting" id="course-Path" value="Fastest Path">
+                                <label class="form-check-label" for="course-Path">
+                                หาเส้นทางที่เร็วที่สุด
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <b>เส้นทางตาม Project ที่ต้องการ</b>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RecommendationSetting" id="Tic-Path" value="TicTacToe">
+                                <label class="form-check-label" for="Tic-Path">
+                                TicTacToe
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RecommendationSetting" id="Lib-Path" value="Library">
+                                <label class="form-check-label" for="Lib-Path">
+                                Library System
+                                </label>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RecommendationSetting" id="Ros-Path" value="Roshambo">
+                                <label class="form-check-label" for="Ros-Path">
+                                Roshambo
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RecommendationSetting" id="Cal-Path" value="Calendar">
+                                <label class="form-check-label" for="Cal-Path">
+                                Calendar
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="RecommendationSetting" id="Calc-Path" value="Calculator">
+                                <label class="form-check-label" for="Calc-Path">
+                                Calculator
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+        </form>       
+
+      </div>
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+

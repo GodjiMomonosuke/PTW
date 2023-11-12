@@ -1,0 +1,76 @@
+
+<!-- MIDDLE 1 -->
+<div class="content">
+    <div id = "content" class="container">
+<!--   C Language -->
+        <div class="accordion" id="accordionParentSyntax">
+            <!--   Introduce -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h1>Introduce</h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><i href="/home" class="fa fa-home" style="font-size:16px"></i></li>
+                    <li class="breadcrumb-item active" aria-current="page">Project</li>
+                </ol>
+                   <div class="box bg-light h2 mb-5 shadow" >
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <div lang="ja">
+                          <% var count = 5 %>
+                          <% if(Object.keys(RecommendaResult).length === 0){ %>
+                            <h2> <%= count %> โปรเจกต์ ยังไม่ปลดล็อก !</h2>
+                                <h1>เรียนรู้เพิ่มเติมเพื่อปลดล็อก</h1>
+                                <div class="d-grid gap-2">
+                                  <a href="/course" class="btn btn-outline-dark">เข้าสู่บทเรียน</a>
+                            </div>
+                            
+                          <% } else{ %>  
+
+                            <% if(RecommendaResult[0].TicTacToePercent === 100) { count = count-1%> <%# Follow node %> 
+                              <p class="wrapbox auto">
+                                <br><a href="/project-Tic_Tac_Toe" style="color:black">Tic Tac Toe</a>
+                              </p>
+                            <% } %>
+                            <% if(RecommendaResult[0].LibraryPercent === 100) {count = count-1 %> <%# Follow node %> 
+                              <p class="wrapbox auto">
+                                <br><a href="/project-Library_System" style="color:black">Library System</a>
+                              </p>
+                            <% } %>
+                            <% if(RecommendaResult[0].RoshamboPercent === 100) {count = count-1 %> <%# Follow node %> 
+                              <p class="wrapbox auto">
+                                <br><a href="/project-Roshambo" style="color:black">Roshambo</a>
+                              </p>
+                            <% } %>
+                            <% if(RecommendaResult[0].CalendarPercent === 100) {count = count-1 %> <%# Follow node %> 
+                              <p class="wrapbox auto">
+                                <br><a href="/project-Calendar" style="color:black">Calendar</a>
+                              </p>
+                            <% } %>
+                            <% if(RecommendaResult[0].CalculatorPercent === 100) {count = count-1 %> <%# Follow node %> 
+                              <p class="wrapbox auto">
+                                <br><a href="/project-Calculator" style="color:black">Calculator</a>
+                              </p>
+                              <% } else{ %>  
+                                <h2> <%= count %> Project ยังไม่ปลดล็อก !</h2>
+                                <h1>เรียนรู้เพิ่มเติมเพื่อปลดล็อก</h1>
+                                <div class="d-grid gap-2">
+                                  <a href="/course" class="btn btn-outline-dark">เข้าสู่บทเรียน</a>
+                              </div>
+                             <% } %>
+                            
+                          <% } %>
+                            
+                             
+                          </div>
+                    </div>
+                </div>
+                <% if(count >=5 || count === 0) { %> <%# Follow node %> 
+               
+                  <% } else{ %>  
+                    <h3>มีอีก <%= count %> Project ที่ไม่ปลดล็อก!</h3>
+                    <a href="/course" class="btn btn-outline-dark">เข้าสู่บทเรียน</a>
+                 <% } %>
+                
+        <br></div>
+        </div>
+    </div>
+</div>
+

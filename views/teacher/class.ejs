@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Class</title>
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+
+<%- include('../layouts/header') %>
+<br><br><br>
+
+<div id = "content" class="container">
+
+    <%- include('./class-Student') %>
+
+
+    <h1>Class Management</h1>
+    <div class="row ">
+        <div class="col-sm">
+            <div class="box bg-light  mb-5 shadow" >
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Token</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <% for (let i = 0; i < Object.keys(classResult).length; i++) {   %>
+                            <th scope="row"><%=i+1%></th>
+                            <td><%=classResult[i].name %></td>
+                            <td><%=classResult[i].token %></td>
+                            <tr>
+                            </tr>
+                        <%} %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-outline-success" type="button"data-bs-toggle="modal" data-bs-target="#CreateClass">Create class</button>
+            <button class="btn btn-outline-danger" type="button"data-bs-toggle="modal" data-bs-target="#RemoveClass">Remove class</button>
+            <button class="btn btn-outline-dark" type="button"data-bs-toggle="modal" data-bs-target="#KickStudent">Kick</button>
+            
+        </div>
+        
+       
+
+</div><br>
+
+
+<!-- Modal -->
+<div class="modal fade" id="CreateClass" tabindex="-1" aria-labelledby="CreateClass" aria-hidden="true">
+    <!-- Vertically centered scrollable modal -->
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="CreateClass">Create class</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="/class/create" method="post" autocomplete="off">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="classname" class="form-label"><b>Class Name</b></label>
+                        <input type="text" class="form-control" id="classname" name="classname" placeholder="ชื่อของคลาส เช่น ก154">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-outline-success">Submit</button>
+                </div>
+            </form>    
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="modal fade" id="RemoveClass" tabindex="-1" aria-labelledby="RemoveClass" aria-hidden="true">
+    <!-- Vertically centered scrollable modal -->
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="RemoveClass">Remove Class</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/class/remove" method="post" autocomplete="off">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="classid" class="form-label"><b>Class ID</b></label>
+                            <div  class="form-text">กรอก Class Token ที่ต้องการลบ</div>
+                            <input type="text" class="form-control" id="classid" name="classid" placeholder="เช่น APT-abc1234">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-outline-danger">Submit</button>
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="KickStudent" tabindex="-1" aria-labelledby="KickStudent" aria-hidden="true">
+    <!-- Vertically centered scrollable modal -->
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="KickStudent">Remove Student</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/class/kick" method="post" autocomplete="off">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="studentEmail" class="form-label"><b>Student Email</b></label>
+                            <input type="email" class="form-control" id="studentEmail" name="studentEmail" placeholder="เช่น lin.zhong@mail.com">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-outline-danger">Submit</button>
+                    </div>
+                </form> 
+                
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<%- include('../layouts/footer') %>

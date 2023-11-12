@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <title>Function </title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+    <!-- LEFT -->
+    <%- include('../layouts/course-list') %>
+    <!-- END OF LEFT-->
+
+    <!-- MIDDLE 1 -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .breadcrumb {
+            margin-bottom: 0;
+            background-color: white;
+            }
+        .blockquote-footer {
+            color:black;
+        }
+    </style>
+    <a id="Token"></a>
+    <!-- MIDDLE 1 -->
+    <div class="content">
+        <div id = "content" class="container">
+    <!--   C Language -->
+            <div class="accordion" id="accordionParentSyntax">
+                <!--   Token -->
+                <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                    <h1 >Function</h1>
+                    <!--   ## -->
+                    <div class="box bg-light  mb-5 shadow" >
+                        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                            <h1 id = ''> Functions </h1>
+                            <br>ในบทนี้ จะรู้จักฟังก์ชันต่างๆ (ทั้งฟังก์ชันที่ผู้ใช้กำหนดและไลบรารีมาตรฐาน) ในการเขียนโปรแกรม C นอกจากนี้ จะได้เรียนรู้ว่าเหตุใดจึงใช้ฟังก์ชันในการเขียนโปรแกรม<br>
+                            <br>ฟังก์ชันคือบล็อกของโค้ดที่ทำงานเฉพาะ<br>
+                            <br>สมมติว่าเราต้องสร้างโปรแกรมเพื่อสร้างวงกลมและระบายสี เราสามารถสร้างสองฟังก์ชันเพื่อแก้ปัญหานี้:<br>
+                            <br>- สร้างฟังก์ชันวงกลม<br>
+                            <br>- สร้างฟังก์ชันสี<br>
+                            <br>การแบ่งปัญหาที่ซับซ้อนออกเป็นส่วนย่อยๆ ทำให้โปรแกรมของเราเข้าใจและนำมาใช้ใหม่ได้ง่าย<br>
+                            <h5><br>Types of function<br></h5>
+                            <br>มีฟังก์ชั่นสองประเภทในการเขียนโปรแกรม C<br>
+                            <br>- ฟังก์ชันห้องสมุดมาตรฐาน<br>
+                            <br>- ฟังก์ชันที่กำหนดผู้ใช้<br>
+                            <h5><br>Standard library functions<br></h5>
+                            <br>ฟังก์ชันไลบรารีมาตรฐานเป็นฟังก์ชันในตัวในการเขียนโปรแกรม C ฟังก์ชันเหล่านี้ถูกกำหนดไว้ในไฟล์ส่วนหัว ตัวอย่างเช่น,<br>
+                            <br>- เป็นฟังก์ชัน printf() ไลบรารีมาตรฐานในการส่งเอาต์พุตที่จัดรูปแบบไปยังหน้าจอ (แสดงเอาต์พุตบนหน้าจอ) ฟังก์ชันนี้ถูกกำหนดไว้ใน  stdio.h ไฟล์ส่วนหัว<br>
+                            <br>ดังนั้นในการใช้ฟังก์ชัน printf() เราจำเป็นต้องรวม stdio.h ไฟล์ส่วนหัวโดยใช้#include < stdio.h ><br>
+                            <br>- ฟังก์ชัน sqrt( )คำนวณรากที่สองของตัวเลข ฟังก์ชั่นถูกกำหนดไว้ใน math.h ไฟล์ส่วนหัว<br>
+                            <h5><br>User-defined function<br></h5>
+                            <br>เรายังสามารถสร้างฟังก์ชันได้ตามความต้องการ ฟังก์ชันดังกล่าวที่สร้างโดยผู้ใช้เรียกว่าฟังก์ชันที่ผู้ใช้กำหนดเอง<br>
+                            <h5><br>How user-defined function works?<br></h5>
+                            <img src="https://drive.google.com/uc?id=1FZvAThm1zCfANt4eOWF77rJ_n1FTS1Xc">
+                            <br>การทำงานของโปรแกรม C เริ่มต้นจากฟังก์ชัน main() เมื่อคอมไพเลอร์พบ functionName(); การควบคุมโปรแกรมจะข้ามไปที่<br>
+                            <img src="https://drive.google.com/uc?id=1cCGLZ1aYnHA8yx-rFwD39TV98vZqQJY6">
+                            <br>และคอมไพเลอร์เริ่มรันโค้ด functionName() ภายในการควบคุมโปรแกรมจะข้ามกลับไปที่ฟังก์ชัน main() เมื่อโค้ดภายในนิยามฟังก์ชันถูกดำเนินการ<br>
+                            <img src="https://drive.google.com/uc?id=115gXZAk9pvgmUSY7yKwkmPXz1FJoCu6P">
+                            <br>หมายเหตุ ชื่อฟังก์ชันเป็นตัวระบุและควรไม่ซ้ำกัน<br>
+                            <br>นี่เป็นเพียงภาพรวมของฟังก์ชันที่ผู้ใช้กำหนดเอง เยี่ยมชมหน้าเหล่านี้เพื่อเรียนรู้เพิ่มเติมเกี่ยวกับ:<br>
+                            <br>- ฟังก์ชันที่ผู้ใช้กำหนดในการเขียนโปรแกรม C<br>
+                            <br>- ประเภทของฟังก์ชันที่ผู้ใช้กำหนด<br>
+                            <h5><br>Advantages of user-defined function<br></h5>
+                            <br>1.โปรแกรมจะง่ายต่อการเข้าใจ บำรุงรักษา และแก้ปัญหา<br>
+                            <br>2.codeที่ใช้ซ้ำได้ในโปรแกรมอื่น<br>
+                            <br>3.โปรแกรมขนาดใหญ่สามารถแบ่งออกเป็นโมดูลขนาดเล็กได้ ดังนั้นโปรแกรมขนาดใหญ่สามารถแบ่งออกได้ในหมู่โปรแกรมเมอร์หลายคน<br>
+                            <h5><br>Recursion<br></h5>
+                            <br>ฟังก์ชันที่เรียกตัวเองว่าฟังก์ชันแบบเรียกซ้ำ และเทคนิคนี้เรียกว่าการเรียกซ้ำ<br>
+                            <h5><br>How recursion works?<br></h5>
+                            <img src="https://drive.google.com/uc?id=1bBQ7z4evsLG5fQhgm_lAnNI0HZbfhd0E">
+                            <img src="https://drive.google.com/uc?id=14wPc2HJu-lwP_nbJNrzbj0G8j1PuHTzj">
+                            <br>การเรียกซ้ำจะดำเนินต่อไปจนกว่าจะตรงตามเงื่อนไขบางประการเพื่อป้องกัน<br>
+                            <br>เพื่อป้องกันการเรียกซ้ำแบบอนันต์ สามารถใช้ คำสั่ง if...else (หรือแนวทางที่คล้ายกัน) โดยที่สาขาหนึ่งทำการเรียกซ้ำ และคำสั่งอื่นๆ จะไม่ใช้<br>
+                            <br>Example: Sum of Natural Numbers Using Recursion<br>
+                            <img src="https://drive.google.com/uc?id=1BOghu9gIIWR-75MwOFaN14CHYxx9lKN1">
+                            <br>Output<br>
+                            <img src="https://drive.google.com/uc?id=1ueR03QBXXAoSy74KxcGWMysxOql7Jmx9">
+                            <br>เริ่มแรก sum() เรียกจากฟังก์ชัน main() ด้วยตัวเลขผ่านไปเป็นข้อโต้แย้งสมมุติ ค่าของ n ข้างใน sum() เป็น 3 ตอนแรก ในระหว่างการเรียกใช้ฟังก์ชันถัดไป 2 จะถูกส่งไปยังฟังก์ชัน sum() กระบวนการนี้จะดำเนินต่อไปจนถึงนเท่ากับ 0<br>
+                            <br>เมื่อไหร่ n เท่ากับ 0 เงื่อนไข if ล้มเหลวและดำเนินการ else ส่วนหนึ่งส่งคืนผลรวมของจำนวนเต็มไปยังฟังก์ชัน main() ในท้ายที่สุด<br>
+                            <img src="https://drive.google.com/uc?id=1lJdyVsgewLqLVkULTlLKdi4FUtZsw0t9">
+                            <h5><br>Advantages and Disadvantages of Recursion<br></h5>
+                            <br>การเรียกซ้ำทำให้โปรแกรมดูมีระเบียบ อย่างไรก็ตามหากประสิทธิภาพเป็นสิ่งสำคัญ ให้ใช้ loop แทนเนื่องจากการเรียกซ้ำมักจะช้ากว่ามาก<br>
+                            <br>ดังที่กล่าวไปแล้ว การเรียกซ้ำเป็นแนวคิดที่สำคัญ มักใช้ในโครงสร้างข้อมูลและอัลกอริทึม ตัวอย่างเช่น เป็นเรื่องปกติที่จะใช้การเรียกซ้ำในปัญหาต่างๆ เช่น  tree traversal<br>
+                            <iframe width="480" height="320" src="https://www.youtube.com/embed/3lqgdqoY83o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+                        </div>
+                    </div>
+            <br ></div>
+           
+        
+        <button onclick="window.location.href='/course-Function-quiz'" type="button" class="btn btn-outline-secondary btn-lg btn-block bg-light shadow" style="color:black" ><h2><u>แบบทดสอบย่อย</h2></u></button>
+        
+
+        <br></div>
+        </div>
+    </div>
+
+
+    <!-- END Of MIDDLE  -->
+    </body>
+</html>
+
+

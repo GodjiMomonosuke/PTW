@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+    
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .breadcrumb {
+            margin-bottom: 0;
+            background-color: white;
+            }
+        .blockquote-footer {
+            color:black;
+        }
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <link rel='stylesheet' href='stylesheets/compiler_line.css' />
+    <link rel='stylesheet' href='stylesheets/Drag_Drop.css' />
+    <title>Pointers - QUIZ</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+<!-- LEFT -->
+<%- include('../layouts/course-list') %>
+<!-- END OF LEFT-->
+    
+    
+ 
+
+<!-- MIDDLE 1 -->
+<div class="content">
+    <div id = "content" class="container">
+<!--   C Language -->
+        <div class="accordion" id="accordionParentSyntax">
+            <!--   Introduce -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h1>Pointers - QUIZ</h1>
+                
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><i href="/home" class="fa fa-home" style="font-size:16px"></i></li>
+                    <li class="breadcrumb-item active" aria-current="page">Course</li>
+                </ol>
+
+<%# START %> 
+<form action="/course-Pointers-quiz/submit" method="post" autocomplete="off" >
+
+    
+
+    <%# LV1 %> 
+                <h2><u>คำถามที่ : 1</u></h2>
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        สัญลักษณ์ใดใช้ในการกำหนด pointers
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice1" id="option1-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-1">
+                        ก. /
+                    </label>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-2">
+                        ข. #
+                    </label>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-3">
+                        ค. &
+                    </label>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-4">
+                        ง. *
+                    </label>
+                </div>
+                <br>
+    <%# LV2 %>                     
+                <h2><u>คำถามที่ : 2</u></h2>
+                <img width="500" height="600" src="https://drive.google.com/uc?id=1k5-X2REEddrmYOs7SfFfq2g-asY-YsDN" class="img-thumbnail rounded" >
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        จากรูปค่า Output จะออกมาเท่าใด
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice2" id="option2-1" autocomplete="off" value="A" required="required">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-1">
+                        ก. 0
+                    </label>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-2">
+                        ข. 1
+                    </label>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-3">
+                        ค. 2
+                    </label>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-4">
+                        ง. 3
+                    </label>
+                </div>
+                <br>
+    <%# LV3 %>
+                <h2><u>คำถามที่ : 3</u></h2>
+                <div class="list-group">
+                    <p id="choice3question" type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;"></p>
+                    <ul class="draggable-list" id="draggable-list"></ul>
+                    <input type="hidden" name="choice3" id="choice3result">
+                </div>
+                <br>
+        <%# LV4 %>                
+                <h2><u>คำถามที่ : 4</u> <button type="button" style="color: black;" class="btn btn-outline-danger " data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                    ทดสอบโค้ด
+                </button></h2> 
+
+                
+                <p type="text"  class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                    <iframe src="<%= ADRI  %> " width="100%" height="480" allow="autoplay"></iframe>
+                </p>
+                <br>
+
+                <div class="form-group" >
+                    <h3>CODE</h3>
+                    <textarea style="height: 400px;" class="form-control" id="lineCounter" readonly rows="10">1 </textarea>
+                    <textarea style="height: 400px;" class="form-control" id="code" name="code" rows="10" required></textarea>
+                </div>
+                <h3>ผลลัพธ์ที่ได้</h3>
+                <textarea class="form-control" style="height: 100px;" rows="4" cols="30" name="expResult" required></textarea>
+
+                <h3>การประยุกต์</h3>
+                    <p><b>ผลลัพธ์ที่คาด</b> : <%= ADRI_Expect  %> </p>  
+                    <p><b>ตัวแปรที่เปลี่ยน</b></p>
+                    <textarea class="form-control" style="height: 150px;" rows="4" name="Improvevariable" cols="50"></textarea>
+               
+
+                Language : <select name="lang"><option value="C">C</option></select>
+                <br />
+                <br>
+    <%# SUBMIT %> 
+            <!-- Button trigger modal -->
+            <div class="d-grid gap-2">
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
+                    ส่งคำตอบ
+                </button>
+            </div>
+            
+            <!-- Modal Submit -->        
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">ส่งคำตอบ</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        คุณต้องการส่งคำตอบใช่หรือไม่ ?
+                        <div id="emailHelp" class="form-text">หากยังทำโจทย์ไม่ครบ จะไม่สามารถกดส่งได้ </div>
+                        </div>
+                        
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">ไม่</button>
+                        <button type="submit" class="btn btn-dark" value="Submits" id="check" name="check">ใช่</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <br>
+
+            <!-- Modal CODE -->        
+            <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Online compiler</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="500px"></iframe>
+                    </div>   
+          
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-lg btn-block" data-bs-dismiss="modal">ปิด</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <br>
+</form> 
+<%# END %> 
+
+        <br></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="javascripts/lv3/6_Pointers.js"></script>
+<script src="javascripts/compilerStyle.js"></script>

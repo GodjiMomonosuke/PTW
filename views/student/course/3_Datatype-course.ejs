@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <title>Datatype & I/O</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+    <!-- LEFT -->
+    <%- include('../layouts/course-list') %>
+    <!-- END OF LEFT-->
+
+    <!-- MIDDLE 1 -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .breadcrumb {
+            margin-bottom: 0;
+            background-color: white;
+            }
+        .blockquote-footer {
+            color:black;
+        }
+    </style>
+    <a id="Datatype"></a>
+    <!-- MIDDLE 1 -->
+    <div class="content">
+        <div id = "content" class="container">
+    <!--   C Language -->
+            <div class="accordion" id="accordionParentSyntax">
+                <!--   Token -->
+                <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                    <h1 >Datatype</h1>
+                    <!--   ## -->
+                    <div class="box bg-light  mb-5 shadow" >
+                        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                            <h1 id = ''> Datatype </h1>
+                            <br>แต่ละโปรแกรมต้องการข้อมูลบางประเภทเพื่อแสดงผลลัพธ์ที่มีความหมายข้อมูลประเภทนี้เรียกว่าประเภทข้อมูล<br>
+                            <img src="https://drive.google.com/uc?id=165sP0yGn1rRDwWE4J-7EtyaYLdvV4c3J" width="600" height="250">
+                            <h5><br>แนะนำตัวแปรในภาษา C <br></h5>
+                            <br>ในบทเรียนนี้ เราจะพูดเกี่ยวกับตัวแปรในภาษา C ตัวแปรเป็นสถานที่สำหรับเก็บข้อมูลในหน่วยความจำ โดยมีชื่อของตัวแปรเพื่อใช้อ้างถึงข้อมูล (Identifier) ตัวแปรถูกใช้เพื่อเก็บค่า เราสามารถสร้างตัวแปรได้เป็นจำนวนมากโดยมีชื่อที่แตกต่างกัน รูปแบบของการประกาศตัวแปรในภาษา C คือ<br>
+                            <br><img src="https://drive.google.com/uc?id=1YG2Sx790dNaKiHdMZ2sI2oxYw4uo17f9"><br>
+                            <br>type เป็นประเภทของข้อมูลที่จะเก็บในตัวแปร identifier เป็นที่รู้จักกันในชื่อของตัวแปร เราใช้ชื่อนี้เพื่ออ้างถึงค่าที่ตัวแปรนั้นเก็บอยู่ values เป็นทางเลือกที่เราสามารถกำหนดค่าให้กับตัวแปรเมื่อมันถูกสร้าง หรือกำหนดในภายหลังได้ <br>ตัวอย่าง<br>
+                            <br><img src="https://drive.google.com/uc?id=1yyaeadHn8u-1mDg3QaELgiHPlPxlEvGv"><br>
+                            <br>ในตัวอย่างเรามีตัวแปร 3 ตัว ตัวแรกเป็นตัวแปรประเภท int และมีชื่อว่า a ใช้เพื่อเก็บค่าเลขจำนวนเต็ม (Integer) และเรายังไม่ได้กำหนดค่าใดๆให้ ดังนั้นค่าเริ่มต้นของตัวแปรเมื่อถูกสร้างขึ้นจะเป็น NULL ตัวแปรที่สองเป็นประเภท float ตัวแปรนี้จะถูกใช้เพื่อเก็บค่าของจำนวนจริง และตัวแปรที่สามเป็นประเภทเป็น char มันถูกใช้เพื่อเก็บสัญลักษณ์หนึ่งตัวใน ASCII code หรือตัวอักษรและเรากำหนด 'A' เป็นค่าเริ่มต้นให้กับมัน<br>
+                            <br>ในภาษา C มีประเภทข้อมูลชนิดต่าง ๆ ที่ให้เราสามารถใช้เพื่อชนิดการกับข้อมูลต่างประเภทกัน เช่น Boolean, Number, Character และ Object เป็นต้น<br>
+                            <h5><br>int<br></h5>
+                            <br>เป็นจำนวนเต็มที่มีได้ทั้งค่าศูนย์ ค่าบวก และค่าลบ แต่ไม่มีค่าทศนิยม ตัวอย่างเช่น 0, -5, 10 เราใช้intประกาศตัวแปรจำนวนเต็มได้<br>
+                            <img src="https://drive.google.com/uc?id=1yKeeNZqFR66wszdfoKv8HwBwhOcpQ0g4">
+                            <br>ในตัวอย่างด้านบน id เป็นตัวแปรประเภทจำนวนเต็ม เราสามารถประกาศตัวแปรหลายตัวพร้อมกันในการเขียนโปรแกรม C ตามตัวอย่างด้านล่างเช่น<br>
+                            <img src="https://drive.google.com/uc?id=1GF6Q2MiT9IfeDIJSbMr6FOywVrf5Ls0i">
+                            <h5><br>float and double<br></h5>
+                            <br>float และ double ใช้สำหรับเก็บจำนวนจริงที่เป็นเลขทศนิยม<br>
+                            <img src="https://drive.google.com/uc?id=1o9aTvnEPc9wE2DGdf9yxvJupvtV-Mp-r">
+                            <br>ใน C ตัวเลขทศนิยมสามารถแสดงเป็นเลขชี้กำลังได้เช่นกัน ตัวอย่างเช่น<br>
+                            <img src="https://drive.google.com/uc?id=1QanGXOFB1haV0Z8_lAC6JuyI5Rtxrz_N">
+                            <br>ความแตกต่างระหว่างfloatและdouble? <br>
+                            <br>ขนาดของ float (ชนิดข้อมูล float ความแม่นยำเดียว) คือ 4 ไบต์ และขนาดของ double (ชนิดข้อมูล float ความแม่นยำสองเท่า) คือ 8 ไบต์<br>
+                            <h5><br>char<br></h5>
+                            <br>คีย์เวิร์ด char ใช้สำหรับประกาศตัวแปรประเภทอักขระ ตัวอย่างเช่น<br>
+                            <img src="https://drive.google.com/uc?id=1nvQhPB0GrC8UXOnucCzC1hzf9z3mdUX2">
+                            <br>ขนาดของตัวแปรอักขระคือ 1 ไบต์<br>
+                            <h5><br>Void<br></h5>
+                            <br>void เป็นประเภทที่ไม่สมบูรณ์ หมายถึง "ไม่มีอะไร" หรือ "ไม่มีประเภท" ตัวอย่างเช่น หากฟังก์ชันไม่ส่งคืนสิ่งใดๆ ประเภทการส่งคืนควรใช้ void<br>
+                            <h5><br>short and long<br></h5>
+                            <br>หากเราต้องการใช้ตัวเลขจำนวนมาก เราสามารถใช้ตัวระบุประเภท long ได้ โดยใช้วิธีดังนี้<br>
+                            <img src="https://drive.google.com/uc?id=1VlmJtFNfOgojHigm-kICNHM-SMwFL3Zh">
+                            <br>ที่นี่ตัวแปร a และ b สามารถเก็บค่าจำนวนเต็มได้ และ c สามารถเก็บเลขทศนิยมได้ หากเราแน่ใจว่าจะใช้เฉพาะจำนวนเต็มขนาดเล็กสามารถใช้ short ได้<br>
+                            <img src="https://drive.google.com/uc?id=1Er71MrPj47t6DfVLYmiqO-p6XmjTjVCp">
+                            <br>เราสามารถตรวจสอบขนาดของตัวแปรได้ตลอดเวลาโดยใช้คำสั่ง sizeof()<br>
+                            <img src="https://drive.google.com/uc?id=1Z0ZFfO-b0_hDma-1VuiERoIPEfLs3BNM">
+                            <h5><br>signed and unsigned<br></h5>
+                            <br>ใน C signed และ unsigned เป็นตัวดัดแปลงประเภทข้อมูล เราสามารถเปลี่ยนการจัดเก็บข้อมูลของตัวแปรข้อมูลได้โดยใช้<br>
+                            <br> - signed : เก็บได้ทั้งตัวเลขบวกและลบ <br>
+                            <br> - unsigned : อนุญาตให้เก็บเฉพาะตัวเลขที่เป็นบวก<br>
+                            <br>ตัวอย่างเช่น<br>
+                            <img src="https://drive.google.com/uc?id=1jH7s4cE69gYdVmrwk-Pzt2aCGfYJJKvs">
+                            <br>ที่นี่ตัวแปร x และ num สามารถเก็บค่าศูนย์และค่าบวกได้เท่านั้นเนื่องจากเราใช้ unsigned ตัวแก้ไข พิจารณาขนาดของ int เป็น 4 bytes, ตัวแปร y สามารถเก็บค่าจาก-2^31ถึง 2^31-1 ในขณะที่ตัวแปร xสามารถเก็บค่าจาก 0 ถึง 2^32-1<br>
+                            <h5><br>Derived Data Types<br></h5>
+                            <br>ชนิดข้อมูลที่ได้มาจากชนิดข้อมูลพื้นฐานเป็นชนิดที่ได้รับ ตัวอย่างเช่น อาร์เรย์ ตัวชี้ ประเภทฟังก์ชัน โครงสร้าง ฯลฯ<br>
+                            <br>ตารางข้างล่างนี้แสดงประเภทข้อมูลทั้งหมดในภาษา C<br>
+                            <br><img src="https://drive.google.com/uc?id=1qD7qKSkfng990gC54uqkhy1zt4cryyxz" width="500" height="500">
+                            <br><br>
+                            <iframe width="480" height="320" src="https://www.youtube.com/embed/wnbzTjWr5gY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+                        </div>
+                    </div>
+            <br ></div>
+
+        
+        <button onclick="window.location.href='/course-Datatype-quiz'" type="button" class="btn btn-outline-secondary btn-lg btn-block bg-light shadow" style="color:black" ><h2><u>แบบทดสอบย่อย</h2></u></button>
+        
+
+        
+
+        <br></div>
+        </div>
+    </div>
+
+
+    <!-- END Of MIDDLE  -->
+    </body>
+</html>
+
+

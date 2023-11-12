@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <title>Pointers</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+    <!-- LEFT -->
+    <%- include('../layouts/course-list') %>
+    <!-- END OF LEFT-->
+
+    <!-- MIDDLE 1 -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .breadcrumb {
+            margin-bottom: 0;
+            background-color: white;
+            }
+        .blockquote-footer {
+            color:black;
+        }
+    </style>
+    <a id="Token"></a>
+    <!-- MIDDLE 1 -->
+    <div class="content">
+        <div id = "content" class="container">
+    <!--   C Language -->
+            <div class="accordion" id="accordionParentSyntax">
+                <!--   Token -->
+                <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                    <h1 >Pointers</h1>
+                    <!--   ## -->
+                    <div class="box bg-light  mb-5 shadow" >
+                        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                            <h1 id = ''> Pointers </h1>
+                            <br>ในบทนี้ จะได้เรียนรู้เกี่ยวกับพอยน์เตอร์ ตัวชี้คืออะไร เราใช้อย่างไร และข้อผิดพลาดทั่วไปที่เราอาจพบเมื่อใช้งานโดยใช้ตัวอย่างช่วยพอยน์เตอร์เป็นคุณสมบัติที่ทรงพลังของการเขียนโปรแกรม C และ C++ ก่อนที่เราจะเรียนรู้พอยน์เตอร์ เรามาเรียนรู้เกี่ยวกับที่อยู่ในการเขียนโปรแกรม C กันก่อน<br>
+                            <h5><br>Address in C<br></h5>
+                            <br>หากมีตัวแปร var ในโปรแกรม &var จะให้ที่อยู่ในหน่วยความจำ เราใช้ที่อยู่หลายครั้งในขณะที่ใช้ scanf() ฟังก์ชัน<br>
+                            <img src="https://drive.google.com/uc?id=1a-8k8WAziUrm0Uw-qvUktA17cNzAp9fD">
+                            <br>ที่นี่ค่าที่ป้อนโดยผู้ใช้จะถูกเก็บไว้ในที่อยู่ของตัวแปร var มาดูตัวอย่างการทำงานกัน<br>
+                            <img src="https://drive.google.com/uc?id=1FrMqz6uXVWIsefEgXnqGzeHwpX0b3Dyg">
+                            <br>Output<br>
+                            <img src="https://drive.google.com/uc?id=1G0vWxQ6pieBYjcJLiYzFckv6fGuzIc9I">
+                            <br>หมายเหตุ:อาจได้รับที่อยู่อื่นเมื่อเราเรียกใช้โค้ดด้านบน<br>
+                            <h5><br>Pointers<br></h5>
+                            <br>Pointers (pointer variables) เป็นตัวแปรพิเศษที่ใช้เก็บที่อยู่แทนที่จะเป็นค่า<br>
+                            <h5><br>Pointer Syntax<br></h5>
+                            <br>นี่คือวิธีที่เราสามารถประกาศพอยน์เตอร์ได้<br>
+                            <img src="https://drive.google.com/uc?id=1secqTbtHvNuTSbVapBFR_QVZRxG9WHtA">
+                            <br>ที่นี่เราได้ประกาศตัวชี้ p ของ int ประเภท ยังสามารถประกาศพอยน์เตอร์ด้วยวิธีเหล่านี้<br>
+                            <img src="https://drive.google.com/uc?id=11fKWRbwrBCY1bM6aNMRd9MQbQEL36BHv">
+                            <br>ลองมาอีกตัวอย่างหนึ่งของการประกาศพอยน์เตอร์<br>
+                            <img src="https://drive.google.com/uc?id=1v_JbyrHR9SG9_wvQL_ir3yCSuG-G5PaP">
+                            <h5><br>Assigning addresses to Pointers<br></h5>
+                            <br>ลองมาดูตัวอย่างกัน<br>
+                            <img src="https://drive.google.com/uc?id=1-twbY0bLBGfCcJUhN000byROal3BEH9b">
+                            <br>ที่นี่ 5 ถูกกำหนดให้กับตัวแปร c  และที่อยู่ของ c ถูกกำหนดให้เป็น pc ตัวชี้<br>
+                            <h5><br>Get Value of Thing Pointed by Pointers<br></h5>
+                            <br>เพื่อให้ได้ค่าของสิ่งที่ชี้โดยพอยน์เตอร์ เราใช้ตัว*ดำเนินการ ตัวอย่างเช่น<br>
+                            <img src="https://drive.google.com/uc?id=1E5BDuolKAxOg5MtlOBCIPIxLwaKozCCH">
+                            <br>ที่นี่ที่อยู่ของ c ถูกกำหนดให้กับ pc ตัวชี้ เพื่อให้ได้ค่าที่เก็บไว้ในที่อยู่นั้น เราใช้*pc.
+                            หมายเหตุ:ในตัวอย่างข้างต้น pc เป็นตัวชี้ แต่ *pc นั้นไม่ใช่ เราไม่สามารถทำอะไร เช่น *pc = &c; โดยวิธีการที่ * เรียกว่าตัวดำเนินการ dereference (เมื่อทำงานกับพอยน์เตอร์) มันทำงานบนตัวชี้และให้ค่าที่เก็บไว้ในตัวชี้นั้น<br>
+                            <h5><br>Changing Value Pointed by Pointers<br></h5>
+                            <br>ลองมาดูตัวอย่างกัน<br>
+                            <img src="https://drive.google.com/uc?id=1jpYFHJKJuRUrCW9CvxeOsSjYuCTXfdnX">
+                            <br>เราได้กำหนดที่อยู่ของ c ไปที่ pc ตัวชี้จากนั้นเราก็เปลี่ยนค่าของ c ถึง 1. ตั้งแต่ pc และที่อยู่ของ c ก็เหมือนกัน *pc ให้เรา 1<br>
+                            <br>ลองมาอีกตัวอย่างหนึ่ง<br>
+                            <img src="https://drive.google.com/uc?id=1pmGdm-wt0s52mBEJ62o9ui5_saWLLfEK">
+                            <br>เราได้กำหนดที่อยู่ของ c ไปที่ pc ตัวชี้ จากนั้นเราเปลี่ยน *pc เป็น 1 โดยใช้*pc = 1; เนื่องจาก pc และที่อยู่ของ c เหมือนกัน, c จะเท่ากับ 1<br>
+                            <br>ลองมาอีกตัวอย่างหนึ่ง<br>
+                            <img src="https://drive.google.com/uc?id=1vWH9MFSX_cP2ZrLapVdNR5Efj6GE2Mcp">
+                            <br>ในขั้นต้น ที่อยู่ของ c ถูกกำหนดให้เป็น pc ตัวชี้โดยใช้ pc = &c; เนื่องจาก c คือ 5 *pc ให้เรา 5<br>
+                            <br>จากนั้นที่อยู่ของdถูกกำหนดให้เป็นพีซีตัวชี้โดยใช้pc = &d;. เนื่องจากdคือ -15 *pcให้ -15 แก่เรา<br>
+                            <br>Example: Working of Pointers<br>
+                            <br>มาดูตัวอย่างการทำงานกัน<br>
+                            <img src="https://drive.google.com/uc?id=10xcH6nsIGxwf8v0cKvSHOKogsG-HEN8S">
+                            <br>Output<br>
+                            <img src="https://drive.google.com/uc?id=12INoJxe-s7gmBtYRKhkA28CrV9tq3tg4">
+                            <br><br>
+                            <iframe width="480" height="320" src="https://www.youtube.com/embed/f2i0CnUOniA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+                            <BR id="Semicolons">
+                        </div>
+                    </div>
+            <br ></div>
+            
+        
+        <button onclick="window.location.href='/course-Pointers-quiz'" type="button" class="btn btn-outline-secondary btn-lg btn-block bg-light shadow" style="color:black" ><h2><u>แบบทดสอบย่อย</h2></u></button>
+        
+
+        
+
+        <br></div>
+        </div>
+    </div>
+
+
+    <!-- END Of MIDDLE  -->
+    </body>
+</html>
+
+

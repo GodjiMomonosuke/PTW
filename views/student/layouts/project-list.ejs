@@ -1,0 +1,64 @@
+<!-- LEFT -->
+<main>
+    <!-- START OF C Language-->
+    <div class="sidebar bg-light shadow">
+        <div class="flex-shrink-0 p-3 " >
+            <a href="/course" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                <span class="fs-5 fw-semibold"><i class='fas fa-code' style='font-size:24px'></i> PROJECT </span>
+            </a>
+            <ul class="list-unstyled ps-0">
+                <div class="accordion" id="accordionParentC"> 
+                    <% if(Object.keys(RecommendaResult).length === 0){ %>
+                            
+                    <% } else{ %>  
+                        
+                        <% if(RecommendaResult[0].TicTacToePercent === 100) { %> <%# Follow node %> 
+                        <!-- Project A -->   
+                        <li class="mb-1">
+                            <li><a href="/project-Tic_Tac_Toe" class="btn  align-items-center rounded collapsed fs-6 fw-semibold"  type="button"  >
+                                Tic Tac Toe
+                            </a></li>
+                        </li>
+                        <% } %>
+                        <% if(RecommendaResult[0].LibraryPercent === 100) { %> <%# Follow node %> 
+                        <!-- Project B -->   
+                        <li class="mb-1">
+                            <li><a href="/project-Library_System" class="btn  align-items-center rounded collapsed fs-6 fw-semibold"  type="button"  >
+                                Library System 
+                            </a></li>
+                        </li>
+                        <% } %>
+                        <% if(RecommendaResult[0].RoshamboPercent === 100) { %> <%# Follow node %> 
+                        <!-- Project C -->   
+                        <li class="mb-1">
+                            <li><a href="/project-Roshambo" class="btn  align-items-center rounded collapsed fs-6 fw-semibold"  type="button"  >
+                                Roshambo 
+                            </a></li>
+                        </li>
+                        <% } %>
+                        <% if(RecommendaResult[0].CalendarPercent === 100) { %> <%# Follow node %> 
+                        <!-- Project D -->   
+                        <li class="mb-1">
+                            <li><a href="/project-Calendar" class="btn  align-items-center rounded collapsed fs-6 fw-semibold"  type="button"  >
+                                Calendar
+                            </a></li>
+                        </li>
+                        <% } %>
+                        <% if(RecommendaResult[0].CalculatorPercent === 100) { %> <%# Follow node %> 
+                        <!-- Project E -->   
+                        <li class="mb-1">
+                            <li><a href="/project-Calculator" class="btn  align-items-center rounded collapsed fs-6 fw-semibold"  type="button"  >
+                                Calculator 
+                            </a></li>
+                        </li>
+                        <% } else{ %>  
+                    
+                            
+                        <% } %>
+                    <% } %>
+                </div>
+            </ul>     
+        </div>
+    </div>
+</main>
+<!-- END OF LEFT-->

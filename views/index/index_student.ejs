@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+        }
+
+        input[type='radio']:checked:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: #ffa500;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid white;
+        }
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <link rel='stylesheet' href='stylesheets/chart.css' />
+    <title>HOME</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+<!-- LEFT -->
+    <main>
+        <div class="sidebar bg-light shadow">
+            <div class="flex-shrink-0 p-3 " >
+                <a  class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                    <span class="fs-5 fw-semibold">
+                        <svg height="36" width="32" viewBox="0 0 448 512">
+                            <path d="M176 448C167.3 448 160 455.3 160 464V512h32v-48C192 455.3 184.8 448 176 448zM272 448c-8.75 0-16 7.25-16 16s7.25 16 16 16s16-7.25 16-16S280.8 448 272 448zM164 172l8.205 24.62c1.215 3.645 6.375 3.645 7.59 0L188 172l24.62-8.203c3.646-1.219 3.646-6.375 0-7.594L188 148L179.8 123.4c-1.215-3.648-6.375-3.648-7.59 0L164 148L139.4 156.2c-3.646 1.219-3.646 6.375 0 7.594L164 172zM336.1 315.4C304 338.6 265.1 352 224 352s-80.03-13.43-112.1-36.59C46.55 340.2 0 403.3 0 477.3C0 496.5 15.52 512 34.66 512H128v-64c0-17.75 14.25-32 32-32h128c17.75 0 32 14.25 32 32v64h93.34C432.5 512 448 496.5 448 477.3C448 403.3 401.5 340.2 336.1 315.4zM64 224h13.5C102.3 280.5 158.4 320 224 320s121.8-39.5 146.5-96H384c8.75 0 16-7.25 16-16v-96C400 103.3 392.8 96 384 96h-13.5C345.8 39.5 289.6 0 224 0S102.3 39.5 77.5 96H64C55.25 96 48 103.3 48 112v96C48 216.8 55.25 224 64 224zM104 136C104 113.9 125.5 96 152 96h144c26.5 0 48 17.88 48 40V160c0 53-43 96-96 96h-48c-53 0-96-43-96-96V136z"/>
+                    </svg> Profile</span>
+                </a>
+                
+                    <div class="card ">
+                        <div class="card-header">
+                            
+                            
+                            <div class="card-body">
+                            <p class="card-text"><b><%= person.email%></b></p>
+                            </div>
+                        </div>
+                        <div class=" card-header bg-light ">
+                        </div>
+                <thead>
+                    <div class="card ">
+                        <div class="card-header">
+                            <svg height="32" width="25" viewBox="0 0 640 512">
+                                <path d="M0 224v272c0 8.84 7.16 16 16 16h80V192H32c-17.67 0-32 14.33-32 32zm360-48h-24v-40c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v64c0 4.42 3.58 8 8 8h48c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm137.75-63.96l-160-106.67a32.02 32.02 0 0 0-35.5 0l-160 106.67A32.002 32.002 0 0 0 128 138.66V512h128V368c0-8.84 7.16-16 16-16h96c8.84 0 16 7.16 16 16v144h128V138.67c0-10.7-5.35-20.7-14.25-26.63zM320 256c-44.18 0-80-35.82-80-80s35.82-80 80-80 80 35.82 80 80-35.82 80-80 80zm288-64h-64v320h80c8.84 0 16-7.16 16-16V224c0-17.67-14.33-32-32-32z"/>
+                            </svg><b> Class</b>
+                                <% if (Object.keys(result).length != 0) { %>
+                                    <br>
+                                    <%= result[0].ClassName %> 
+                                    <br>
+                                    <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#Classjoin">
+                                        <svg width="17.5" height="20" style="font-size: 20px;;align-items: center;" viewBox="0 0 448 512">
+                                            <path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/>
+                                        </svg><b> Change Class</b>
+                                    </button>
+                                <% } else{ %>  
+                                    <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#Classjoin">
+                                        <svg width="17.5" height="20" style="font-size: 20px;;align-items: center;" viewBox="0 0 448 512">
+                                            <path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/>
+                                        </svg><b> Join Class</b>
+                                    </button>
+                                 <% } %>                               
+                        </div>	
+                </thead><br>
+                <thead>
+                    <div class="card ">
+                        <div class="card-header">
+                            <svg height="20" width="20" viewBox="0 0 512 512">
+                                <path d="M505.2 324.8l-47.73-68.78l47.75-68.81c7.359-10.62 8.797-24.12 3.844-36.06c-4.969-11.94-15.52-20.44-28.22-22.72l-82.39-14.88l-14.89-82.41c-2.281-12.72-10.76-23.25-22.69-28.22c-11.97-4.936-25.42-3.498-36.12 3.844L256 54.49L187.2 6.709C176.5-.6016 163.1-2.039 151.1 2.896c-11.92 4.971-20.4 15.5-22.7 28.19l-14.89 82.44L31.15 128.4C18.42 130.7 7.854 139.2 2.9 151.2C-2.051 163.1-.5996 176.6 6.775 187.2l47.73 68.78l-47.75 68.81c-7.359 10.62-8.795 24.12-3.844 36.06c4.969 11.94 15.52 20.44 28.22 22.72l82.39 14.88l14.89 82.41c2.297 12.72 10.78 23.25 22.7 28.22c11.95 4.906 25.44 3.531 36.09-3.844L256 457.5l68.83 47.78C331.3 509.7 338.8 512 346.3 512c4.906 0 9.859-.9687 14.56-2.906c11.92-4.969 20.4-15.5 22.7-28.19l14.89-82.44l82.37-14.88c12.73-2.281 23.3-10.78 28.25-22.75C514.1 348.9 512.6 335.4 505.2 324.8zM456.8 339.2l-99.61 18l-18 99.63L256 399.1L172.8 456.8l-18-99.63l-99.61-18L112.9 255.1L55.23 172.8l99.61-18l18-99.63L256 112.9l83.15-57.75l18.02 99.66l99.61 18L399.1 255.1L456.8 339.2zM256 143.1c-61.85 0-111.1 50.14-111.1 111.1c0 61.85 50.15 111.1 111.1 111.1s111.1-50.14 111.1-111.1C367.1 194.1 317.8 143.1 256 143.1zM256 319.1c-35.28 0-63.99-28.71-63.99-63.99S220.7 192 256 192s63.99 28.71 63.99 63.1S291.3 319.1 256 319.1z"/>
+                            </svg><b> Recommend</b>
+
+                            <% if (Object.keys(RecommendaResult).length !== 0 && RecommendaResult[0].RecommendCourse != "null" ) { %> <%# ถ้าเลือกวิธีแนะนำแล้ว %> 
+                                <br>
+                                <%= RecommendaResult[0].RecommendationType %> <%# วิธีแนะนำคือ %> 
+                                <br>
+                                
+                                <% if (TicTacToePercent === 100 && Library_SystemPercent === 100 && RoshamboPercent === 100 && CalendarPercent === 100 && CalculatorPercent === 100 ) { %> <%# ถ้า Path ครบแล้ว %> 
+                                    <p>คุณได้เรียนครบแล้ว!</p>
+                                <% } else { %>
+                                    <div class="row">
+                                        <% if(RecommendaResult[0].RecommendCourse === "Introduction"){ %> <%# Output จาก Recommend มาเทียบ %> 
+                                            <div class="col-6">
+                                                <button onclick="window.location.href='/course-Introduction'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                            </div>
+                                        <% }else if(RecommendaResult[0].RecommendCourse === "String"){ %>
+                                            <div class="col-6">
+                                                <button onclick="window.location.href='/course-String'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                            </div>
+                                        <% }else if(RecommendaResult[0].RecommendCourse === "Datatype"){ %>
+                                            <div class="col-6">
+                                                <button onclick="window.location.href='/course-Datatype'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                            </div>
+                                        <% }else if(RecommendaResult[0].RecommendCourse === "Operators"){ %>
+                                            <div class="col-6">
+                                                <button onclick="window.location.href='/course-Operators'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                            </div>
+                                        <% }else if(RecommendaResult[0].RecommendCourse === "Flow Control"){ %>
+                                            <div class="col-6">
+                                                <button onclick="window.location.href='/course-Flow_Control'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                            </div>
+                                        <% }else if(RecommendaResult[0].RecommendCourse === "Pointers"){ %>
+                                            <div class="col-6">
+                                                <button onclick="window.location.href='/course-Pointers'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                            </div>
+                                        <% }else if(RecommendaResult[0].RecommendCourse === "Function"){ %>
+                                            <div class="col-6">
+                                                <button onclick="window.location.href='/course-Function'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                            </div>
+                                        <% }else if(RecommendaResult[0].RecommendCourse === "Structure"){ %>
+                                            <div class="col-6">
+                                                <button onclick="window.location.href='/course-Structure'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                            </div>
+                                        <% }else if(RecommendaResult[0].RecommendCourse === "Array"){ %>
+                                            <div class="col-6">
+                                                <button onclick="window.location.href='/course-Array'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                            </div>
+                                        <% } else{ %>  <%# ถ้าไม่มีการแนะนำ คือ เรียนตาม path ที่เลือกเรียบร้อยแล้ว%> 
+                                            <h6>Finished</h6>
+                                            <div class="w-100"></div>
+                                            <div class="col-6">Next</div>
+                                            
+                                        <% } %>
+    
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-dark btn-sm btn-block " data-bs-toggle="modal" data-bs-target="#RecommendSetting"><i class="fa fa-flag" style="font-size: 16px;;align-items: center;" ></i></button>
+                                        </div>
+                                    </div>
+                                <% } %>
+                                
+
+                            <% } else{ %> 
+                                <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#RecommendSetting">
+                                    <svg height="20" width="20" viewBox="0 0 512 512">
+                                        <path d="M349.565 98.783C295.978 98.783 251.721 64 184.348 64c-24.955 0-47.309 4.384-68.045 12.013a55.947 55.947 0 0 0 3.586-23.562C118.117 24.015 94.806 1.206 66.338.048 34.345-1.254 8 24.296 8 56c0 19.026 9.497 35.825 24 45.945V488c0 13.255 10.745 24 24 24h16c13.255 0 24-10.745 24-24v-94.4c28.311-12.064 63.582-22.122 114.435-22.122 53.588 0 97.844 34.783 165.217 34.783 48.169 0 86.667-16.294 122.505-40.858C506.84 359.452 512 349.571 512 339.045v-243.1c0-23.393-24.269-38.87-45.485-29.016-34.338 15.948-76.454 31.854-116.95 31.854z"/></svg>
+                                        <b> Choose</b>
+                                </button>
+                             <% } %>  
+                            
+                        </div>	
+                </thead>
+            </div>
+        </div>
+    </main>
+    
+
+<!-- MID -->
+    <!-- SKILLS-->
+    
+    <div class="content">
+        <% if(isNaN(BasicPercent)){ %>
+
+        <% } else{ %>  
+            <div id = "content" class="container">
+                <h1 id = 'content'><svg height="40" width="40" viewBox="0 0 576 512">
+                    <path d="M352.4 243.8l-49.83 99.5c-6.009 12-23.41 11.62-28.92-.625L216.7 216.3l-30.05 71.75L88.55 288l176.4 182.2c12.66 13.07 33.36 13.07 46.03 0l176.4-182.2l-112.1 .0052L352.4 243.8zM495.2 62.86c-54.36-46.98-137.5-38.5-187.5 13.06L288 96.25L268.3 75.92C218.3 24.36 135.2 15.88 80.81 62.86C23.37 112.5 16.84 197.6 60.18 256h105l35.93-86.25c5.508-12.88 23.66-13.12 29.54-.375l58.21 129.4l49.07-98c5.884-11.75 22.78-11.75 28.67 0l27.67 55.25h121.5C559.2 197.6 552.6 112.5 495.2 62.86z"/>
+                </svg> Skills </h1>   
+                <div class="box bg-light  mb-5 shadow" >
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
+                        
+                        <div class="row mb-3 ">
+                            <h5 for="inputEmail3" class="col-sm-2 col-form-label">Basic</h5>
+                            <div class="col-sm-10 " style="top:10px">
+                                <progress  max="100" value=<%= BasicPercent %>  class="html5 "></progress>
+                            </div>
+                        </div>
+    
+                        <div class="row mb-3">
+                            <h5 for="inputEmail3" class="col-sm-2 col-form-label">Tracing</h5>
+                             <div class="col-sm-10 " style="top:10px">
+                              <progress  max="100" value=<%= TracePercent %>  class="html5 "></progress>
+                            </div>
+                        </div>
+    
+                        <div class="row mb-3">
+                            <h5 for="inputEmail3" class="col-sm-2 col-form-label">Explaining</h5>
+                             <div class="col-sm-10 " style="top:10px">
+                              <progress  max="100" value=<%= ExplainPercent, %>   class="html5 "></progress>
+                            </div>
+                        </div>
+    
+                        <div class="row mb-3">
+                            <h5 for="inputEmail3" class="col-sm-2 col-form-label">Writing</h5>
+                             <div class="col-sm-10 " style="top:10px">
+                              <progress  max="100" value=<%= WritePercent %>  class="html5 "></progress>
+                            </div>
+                        </div>
+                                            
+                    </div>
+                </div>
+            </div>
+        <% } %>
+        
+    <!-- End Of Skill-->
+
+
+        <% if (Object.keys(RecommendaResult).length !== 0 && RecommendaResult[0].RecommendCourse != "null"  ) { %>
+
+        <div id = "content" class="container">
+            <h1 id = 'content'><svg height="30" width="40" viewBox="0 0 384 512">
+                <path d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM192 0C90.02 .3203 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.8 289.2 .0039 192 0zM288.4 260.1c-15.66 17.85-35.04 46.3-49.05 75.89h-94.61c-14.01-29.59-33.39-58.04-49.04-75.88C75.24 236.8 64 206.1 64 175.1C64 113.3 112.1 48.25 191.1 48C262.6 48 320 105.4 320 175.1C320 206.1 308.8 236.8 288.4 260.1zM176 80C131.9 80 96 115.9 96 160c0 8.844 7.156 16 16 16S128 168.8 128 160c0-26.47 21.53-48 48-48c8.844 0 16-7.148 16-15.99S184.8 80 176 80z"/>
+            </svg> Project Unlock  </h1>
+            <div class="box bg-light  mb-5 shadow" >
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
+                   
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-body">
+                                <h5 class="card-title">TicTacToe </h5>
+                                <div class="pie animate" style="--p:<%= TicTacToePercent %> ;--c:#6c757d"> <%= TicTacToePercent %>%</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <h5 class="card-title">Library System</h5>
+                                <div class="pie animate" style="--p:<%= Library_SystemPercent %>;--c:#6c757d"> <%= Library_SystemPercent %>%</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <h5 class="card-title">Roshambo</h5> 
+                                <div class="pie animate" style="--p:<%=RoshamboPercent %>;--c:#6c757d"> <%=RoshamboPercent %>%</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <h5 class="card-title">Calendar</h5>
+                                <div class="pie animate" style="--p:<%=CalendarPercent %>;--c:#6c757d"> <%=CalendarPercent %>%</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <h5 class="card-title">Calculator</h5>
+                                <div class="pie animate" style="--p:<%=CalculatorPercent %>;--c:#6c757d"> <%=CalculatorPercent %>%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Recommendation -->
+
+            
+                <%- include('../student/layouts/recommendation') %>
+            <% } else { %>
+                <div id = "content" class="container">
+                    <h1 id = 'content'><svg height="30" width="40" viewBox="0 0 384 512">
+                        <path d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM192 0C90.02 .3203 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.8 289.2 .0039 192 0zM288.4 260.1c-15.66 17.85-35.04 46.3-49.05 75.89h-94.61c-14.01-29.59-33.39-58.04-49.04-75.88C75.24 236.8 64 206.1 64 175.1C64 113.3 112.1 48.25 191.1 48C262.6 48 320 105.4 320 175.1C320 206.1 308.8 236.8 288.4 260.1zM176 80C131.9 80 96 115.9 96 160c0 8.844 7.156 16 16 16S128 168.8 128 160c0-26.47 21.53-48 48-48c8.844 0 16-7.148 16-15.99S184.8 80 176 80z"/>
+                    </svg> Project Unlock  </h1>
+                    <div class="box bg-light  mb-5 shadow" >
+                        
+                        <button type="button" class="btn btn-outline-dark btn-sm btn-block " data-bs-toggle="modal" data-bs-target="#RecommendSetting">
+                            <svg height="20" width="20" viewBox="0 0 512 512">
+                            <path d="M349.565 98.783C295.978 98.783 251.721 64 184.348 64c-24.955 0-47.309 4.384-68.045 12.013a55.947 55.947 0 0 0 3.586-23.562C118.117 24.015 94.806 1.206 66.338.048 34.345-1.254 8 24.296 8 56c0 19.026 9.497 35.825 24 45.945V488c0 13.255 10.745 24 24 24h16c13.255 0 24-10.745 24-24v-94.4c28.311-12.064 63.582-22.122 114.435-22.122 53.588 0 97.844 34.783 165.217 34.783 48.169 0 86.667-16.294 122.505-40.858C506.84 359.452 512 349.571 512 339.045v-243.1c0-23.393-24.269-38.87-45.485-29.016-34.338 15.948-76.454 31.854-116.95 31.854z"/></svg>
+                            <h4>โปรดเลือกการแนะนำ</h4>
+                        </button>
+                    </div>
+                </div>
+            <% } %>
+            
+          
+            
+        </div>
+    </div>
+    
+
+
+    <!-- Modal -->
+        <!-- Join Class -->
+    <div class="modal fade" id="Classjoin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Class Join</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <form action="/joinclass" method="post" autocomplete="off">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="classCode" class="form-label"><b>Class Token</b></label>
+                        <input type="text" class="form-control" id="classCode" name="classToken" placeholder="Token สำหรับเข้าชั้นเรียน">
+                        <div  class="form-text">**สามารถรับโค้ดจากอาจารย์ผู้สอน</div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-dark">Submit</button>
+                </div>
+            </form>       
+
+        </div>
+        </div>
+    </div>
+
+        <!-- Recommendation -->
+    <div class="modal fade" id="RecommendSetting" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Recommendation Setting</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="/Recommendation_setting" method="post" autocomplete="off">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <b>เส้นทางตาม Course ที่ทำ</b>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="RecommendationSetting" id="course-Path" value="Fastest Path">
+                                    <label class="form-check-label" for="course-Path">
+                                    หาเส้นทางที่เร็วที่สุด
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <b>เส้นทางตาม Project ที่ต้องการ</b>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="RecommendationSetting" id="Tic-Path" value="TicTacToe">
+                                    <label class="form-check-label" for="Tic-Path">
+                                    TicTacToe
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="RecommendationSetting" id="Lib-Path" value="Library">
+                                    <label class="form-check-label" for="Lib-Path">
+                                    Library System
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="RecommendationSetting" id="Ros-Path" value="Roshambo">
+                                    <label class="form-check-label" for="Ros-Path">
+                                    Roshambo
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="RecommendationSetting" id="Cal-Path" value="Calendar">
+                                    <label class="form-check-label" for="Cal-Path">
+                                    Calendar
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="RecommendationSetting" id="Calc-Path" value="Calculator">
+                                    <label class="form-check-label" for="Calc-Path">
+                                    Calculator
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-dark">Submit</button>
+                </div>
+            </form>       
+    
+          </div>
+        </div>
+    </div>
+
+
+  
+
+<%- include('../layouts/footer') %>

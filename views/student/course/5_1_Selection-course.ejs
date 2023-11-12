@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <title>Selection Statement</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+    <!-- LEFT -->
+    <%- include('../layouts/course-list') %>
+    <!-- END OF LEFT-->
+
+    <!-- MIDDLE 1 -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .breadcrumb {
+            margin-bottom: 0;
+            background-color: white;
+            }
+        .blockquote-footer {
+            color:black;
+        }
+    </style>
+    <a id="if_else"></a>
+    <!-- MIDDLE 1 -->
+    <div class="content">
+        <div id = "content" class="container">
+            <h1>Selection Statement</h1>
+    <!--   C Language -->
+            <div class="accordion" id="accordionParentSyntax">
+                <!--   Token -->
+                <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                    <h2 > if else</h2>
+                    <!--   ## -->
+                    <div class="box bg-light  mb-5 shadow" >
+                        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                            <h2 id = ''> if...else </h2>
+                            <br>เราจะได้เรียนรู้เกี่ยวกับคำสั่ง if (รวมถึง if...else และ nested if..else) ในการเขียนโปรแกรม C  ตัวอย่างเช่น<br>
+                            <h5><br>if Statement<br></h5>
+                            <img src="https://drive.google.com/uc?id=1g_JPubg3b1ZeYq7K_gL_AT84Pfj6VXsm">
+                            <h6><br>How if statement works?<br></h6>
+                            <br>คำสั่ง if จะประเมินเงื่อนไขภายใน ()วงเล็บ หากเงื่อนไขเป็นจริงคำสั่งภายในของ if จะถูกดำเนินการ หากเงื่อนไขเป็นเท็จ คำสั่งภายในของ if จะไม่ถูกดำเนินการ<br>
+                            <img src="https://drive.google.com/uc?id=1QwNCIyJjsML6F0gMmb46ah0poXGUEYo-">
+                            <br>
+                            <br>Example 1: if statement<br>
+                            <img src="https://drive.google.com/uc?id=1ZzTkgJZLXsL002QTGeCCGb5Z2jvgqOow">
+                            <br>Output<br>
+                            <img src="https://drive.google.com/uc?id=1v8gPCO3yVD8JDat3kNyCWDFOxpReQqNM">
+                            <br>เมื่อผู้ใช้ป้อน -2 นิพจน์การทดสอบ number < 0 จะเข้าเงื่อนไขเป็นจริง เพราะ -2 น้อยกว่า 0 ฉะนั้น -2 จะแสดงบนหน้าจอ<br>
+                            <img src="https://drive.google.com/uc?id=17uiKG92LDd8An-G5_S6JYXlc0yFSo7jL">
+                            <br>เมื่อผู้ใช้ป้อน 5 นิพจน์การทดสอบ number < 0 จะเข้าเงื่อนไขเป็นเท็จและคำสั่งภายใน if จะไม่ถูกดำเนินการ <br>
+                            <h5><br>if...else Statement<br></h5>
+                            <br>คำสั่งif อาจมี else บล็อกที่เป็นตัวเลือก ไวยากรณ์ของ if..else คำสั่งคือ<br>
+                            <img src="https://drive.google.com/uc?id=1Liz0fWjPeobh8fIJrF0_-nWh8h9NxC-g">
+                            <h6><br>How if...else statement works?<br></h6>
+                            <br>หากนิพจน์ทดสอบว่าเงื่อนไขเป็นจริง<br>
+                            <br>- คำสั่งภายในของ if จะถูกดำเนินการ<br>
+                            <br>- คำสั่งภายในของ else จะถูกข้ามจากการดำเนินการ<br>
+                            <br>หากนิพจน์การทดสอบว่าเงื่อนไขเป็นเท็จ<br>
+                            <br>- คำสั่งภายในของ else จะถูกดำเนินการ<br>
+                            <br>- คำสั่งภายในของ if จะถูกข้ามจากการดำเนินการ<br>
+                            <img src="https://drive.google.com/uc?id=1iVlgNf2VzcgGeASCE0GKPOb3bIASw2NS">
+                            <br>Example 2: if...else statement<br>
+                            <img src="https://drive.google.com/uc?id=1it3G8mBaIk-inZ9k__34mrfa948EyRqx">
+                            <br>Output<br>
+                            <img src="https://drive.google.com/uc?id=1tVwC4-NfdLqSqWozoAWzJg_5p0N_64hc">
+                            <br>เมื่อผู้ใช้ป้อน 7 นิพจน์ทดสอบ number%2==0 เงื่อนไขเป็นเท็จ ดังนั้นคำสั่งภายในของ else จึงถูกดำเนินการ<br>
+                            <h5><br>if...else Ladder<br></h5>
+                            <br>คำสั่ง if...else ดำเนินการสองเงื่อนไขที่แตกต่างกันขึ้นอยู่กับว่านิพจน์การทดสอบเป็นจริงหรือเท็จ สามารถมีเงื่อนไขได้มากกว่า 2 เงื่อนไข<br>
+                            <br>Syntax of if...else Ladder<br>
+                            <img src="https://drive.google.com/uc?id=1PxfwNq-APcsXi1kgsdPBmCtMLbP_uPmo">
+                            <br>Example 3: C if...else Ladder<br>
+                            <img src="https://drive.google.com/uc?id=1DMGBPzDUJrRoAufAxEogRFxiBc0YXuBe">
+                            <br>Output<br>
+                            <img src="https://drive.google.com/uc?id=1roxvRBe8Id8cLgItW-P_6yxuDBZCaKFS">
+                            <br><br>
+                            <iframe width="480" height="320" src="https://www.youtube.com/embed/NlhCe5ltUZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <BR id="break_and_continue">
+                        </div>
+                    </div>
+            <br ></div>
+            <!--   Semicolons -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h2>break and continue</h2>
+                <!--   ## -->
+                <div class="box bg-light  mb-5 shadow" >
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <h2 id = 'Introduce'> break and continue </h2>
+                        <br>เราเรียนรู้เกี่ยวกับ loop ในบทก่อนหน้านี้ ในบทนี้ เราจะเรียนรู้การใช้คำสั่ง break and continue โดยใช้ตัวอย่าง<br>
+                        <h5><br>Break<br></h5>
+                        <br>คำสั่ง break สิ้นสุดการวนซ้ำทันทีเมื่อพบ ไวยากรณ์ของมันคือ<br>
+                        <img src="https://drive.google.com/uc?id=1DFtkJPyHD02d6UaG2G9mSkjmRsMWZpVH">
+                        <br>คำสั่ง break มักใช้กับ if...else คำสั่งภายในลูป<br>
+                        <h5><br>How break statement works?<br></h5>
+                        <img src="https://drive.google.com/uc?id=1rLCLY3OdiIA0GG4k6tKrH-hzijaSTDvY">
+                        <br>Example 1: break statement<br>
+                        <img src="https://drive.google.com/uc?id=1TyuVzhkkhuQGLE8VjlTnIoYCtymt0l1O">
+                        <br>Output<br>
+                        <img src="https://drive.google.com/uc?id=1eoeIlkWmlYw5mhn-nQBVDiijmPU9Dy2R">
+                        <br>โปรแกรมนี้คำนวณผลรวมสูงสุด 10 หมายเลข ทำไมสูงสุด 10 หมายเลข? เป็นเพราะ ถ้าผู้ใช้ป้อนค่าลบ คำสั่ง break จะทำงาน ซึ่งทำให้สิ้นสุด for loop และผลรวมจะแสดงค่าขึ้น<br>
+                        <h5><br>continue<br></h5>
+                        <br>คำสั่ง continue จะข้ามการวนซ้ำปัจจุบันของ loop และทำงานต่อด้วยการวนซ้ำครั้งต่อไป ไวยากรณ์ของมันคือ<br>
+                        <img src="https://drive.google.com/uc?id=1mN818sBs3hT8v2hG7Uas5bRuUGmMAYOa">
+                        <br>คำสั่ง continue นี้มักใช้กับคำสั่ง if...else<br>
+                        <h5><br>How continue statement works?<br></h5>
+                        <img src="https://drive.google.com/uc?id=1CT6vK6Mlpx8-qjy0HedJdFLZrkBFK0Hr">
+                        <br>Example 2: continue statement<br>
+                        <img src="https://drive.google.com/uc?id=1dj3MiLvzoB4UfjJdS1N5t6eaCRQiZ8EU">
+                        <br>Output<br>
+                        <img src="https://drive.google.com/uc?id=1_khPsO1eHk2XncYnQEvLbNLLTCz_NHcP">
+                        <br>ในโปรแกรมนี้ เมื่อผู้ใช้ป้อนค่าบวกผลรวมจะถูกคำนวณโดยใช้คำสั่ง sum += number;<br>
+                        <br>เมื่อผู้ใช้ป้อนค่าลบคำสั่ง continue จะทำงานและจะข้ามค่าลบจากการคำนวณ<br>
+                        <br><br>
+                        <iframe width="480" height="320" src="https://www.youtube.com/embed/obJcPlAtGVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <br id="switch_case">
+                    </div>
+                </div>
+        <br></div>
+        <!--   Identifier -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h2>switch - case</h2>
+                <!--   ## -->
+                <div class="box bg-light  mb-5 shadow" >
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <h2 id = 'Introduce'> Switch </h2>
+                        <br>ในบทนี้ จะได้เรียนรู้การสร้างคำสั่ง switch ในการเขียนโปรแกรม C โดยใช้ตัวอย่างคำสั่ง switch ช่วยให้เราสามารถดำเนินการบล็อกโค้ดหนึ่งบล็อกจากทางเลือกอื่นๆ มากมาย<br>
+                        <br>เราสามารถทำสิ่งเดียวกันกับบันได if...else..if ได้ อย่างไรก็ตามไวยากรณ์ของคำสั่ง switch นั้นอ่านและเขียนได้ง่ายกว่ามาก<br>
+                        <h5><br>Syntax of switch...case+<br></h5>
+                        <img src="https://drive.google.com/uc?id=1wrxwtpGgXfqduN0a-1KRgrYmugEiHT7o">
+                        <h5><br>How does the switch statement work?<br></h5>
+                        <br>Expression ได้รับการประเมินครั้งเดียวและเปรียบเทียบกับค่าของแต่ละเงื่อนไข<br>
+                        <br>- หากมีการตรวจสอบว่าตรงกับเงื่อนไขไหน คำสั่งที่เกี่ยวข้องจะทำงานหลังจากตรวจสอบที่ตรงกัน ตัวอย่างเช่น หากค่าของนิพจน์เท่ากับค่าคงที่ 2 คำสั่ง after case constant2 จะถูกดำเนินการจนกว่า break จะพบ<br>
+                        <br>- หากไม่มีการจับคู่ คำสั่งเริ่มต้นจะถูกดำเนินการ<br>
+                        <br>หมายเหตุ : ถ้าเราไม่ใช้คำสั่ง break นั้น คำสั่งทั้งหมดหลังจากเงื่อนไขที่ตรงกันก็จะถูกดำเนินการด้วย default ประโยคภายในคำสั่ง switch เป็นทางเลือก<br>
+                        <h5><br>switch Statement Flowchart<br></h5>
+                        <img src="https://drive.google.com/uc?id=1VToH_19bFvkG9WjDGRe1nntb23zgyN_D">
+                        <br>Example: Simple Calculator<br>
+                        <img src="https://drive.google.com/uc?id=1m-N0pUztD07fuRuPSe_LvStxJ2rSUiNy">
+                        <br>Output<br>
+                        <img src="https://drive.google.com/uc?id=1JGnlRFMHE5sR64Mzmb5W-IFMhyFycRnj">
+                        <br><br>
+                        <iframe width="480" height="320" src="https://www.youtube.com/embed/37GG-T6B7bc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <br id="goto_statement">
+                    </div>
+                </div>
+        <br></div>
+        <!--   Name Rule -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h2>goto statement</h2>
+                <!--   ## -->
+                <div class="box bg-light  mb-5 shadow" >
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <h2 id = 'Introduce'> goto statement </h2>
+                        <br>ในบทนี้ จะได้เรียนรู้การสร้างคำสั่ง goto ในการเขียนโปรแกรม C นอกจากนี้ จะได้เรียนรู้ว่าเมื่อใดควรใช้คำสั่ง goto และเมื่อใดไม่ควรใช้<br>
+                        <br>คำสั่ง goto ช่วยให้เราสามารถถ่ายโอนการควบคุมของโปรแกรมไปยังที่ระบุเลเบล<br>
+                        <h5><br>Syntax of goto Statement<br></h5>
+                        <img src="https://drive.google.com/uc?id=1OTGsU8afWgpZiBzHNBz58elZZA9RY6h-">
+                        <br>Label เป็นตัวระบุ เมื่อ goto พบคำสั่ง การควบคุมของโปรแกรมจะข้ามไป label และเริ่มรันโค้ด<br>
+                        <img src="https://drive.google.com/uc?id=1XnSMX_svYfbZ4GljxyQnchZXpuLeTGch">
+                        <br>Example: goto Statement<br>
+                        <img src="https://drive.google.com/uc?id=1FgjzWxcwnXbIoKR4wc0EK21AimpjZ1jP">
+                        <br>Output<br>
+                        <img src="https://drive.google.com/uc?id=1m2gD7Wqy6Sd_L3UXguFmY2yOfNBciQ-x">
+                        <br>การใช้gotoคำสั่งอาจนำไปสู่โค้ดที่ผิดพลาดและติดตามได้ยาก ตัวอย่างเช่น<br>
+                        <img src="https://drive.google.com/uc?id=1FCE5s2IaRSEjgnuVQNY6e3gHK17MnlUD">
+                        <br>นอกจากนี้คำสั่ง goto ยังให้เราทำสิ่งที่ไม่ดีได้ เช่น กระโดดออกจากขอบเขตที่ถูกกล่าวว่า goto อาจมีประโยชน์บางครั้ง ตัวอย่างเช่น เพื่อแยกจาก loop ที่ซ้อนกัน<br>
+                        <h5><br>Should you use goto?<br></h5>
+                        <br>ถ้าคิดว่าการใช้คำสั่ง goto ทำให้โปรแกรมง่ายขึ้น เราสามารถใช้มันได้ ที่กล่าวว่า goto ไม่ค่อยมีประโยชน์และเราสามารถสร้างโปรแกรม C ใด ๆ ได้โดยไม่ต้องใช้ goto เลย นี่คือคำพูดจาก Bjarne Stroustrup ผู้สร้าง C++ ว่า"ความจริงที่ว่า 'goto' ทำอะไรก็ได้คือเหตุผลที่เราไม่ใช้มัน"<br>
+                        <br><br>
+                        <iframe width="480" height="320" src="https://www.youtube.com/embed/msbzFUQ4LrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+        </div>
+        
+        <button onclick="window.location.href='/course-Selection_Statement-quiz'" type="button" class="btn btn-outline-secondary btn-lg btn-block bg-light shadow" style="color:black" ><h2><u>แบบทดสอบย่อย</h2></u></button>
+        
+
+        
+
+        <br></div>
+        </div>
+    </div>
+
+
+    <!-- END Of MIDDLE  -->
+    </body>
+</html>
+
+

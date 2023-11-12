@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <title>Loop Statement</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+    <!-- LEFT -->
+    <%- include('../layouts/course-list') %>
+    <!-- END OF LEFT-->
+
+    <!-- MIDDLE 1 -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .breadcrumb {
+            margin-bottom: 0;
+            background-color: white;
+            }
+        .blockquote-footer {
+            color:black;
+        }
+    </style>
+    <a id="for_Loop"></a>
+    <!-- MIDDLE 1 -->
+    <div class="content">
+        <div id = "content" class="container">
+            <h1>Loop Statement</h1>
+    <!--   C Language -->
+            <div class="accordion" id="accordionParentSyntax">
+                <!--   Token -->
+                <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                    <h2 > For Loop</h2>
+                    <!--   ## -->
+                    <div class="box bg-light  mb-5 shadow" >
+                        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <h2 id = ''> For Loop </h2>
+                        <br>ในบทนี้ จะได้เรียนรู้การสร้าง for loop ในการเขียนโปรแกรม C โดยใช้ตัวอย่าง<br>
+                        <br>ในการเขียนโปรแกรม ใช้ลูปเพื่อทำซ้ำบล็อกของ code จนกว่าจะตรงตามเงื่อนไขที่ระบุ การเขียนโปรแกรม C มีลูปสามประเภท:<br>
+                        <br>- For loop<br>
+                        <br>- While loop<br>
+                        <br>- Do…while loop<br>
+                        <h5><br>The syntax of the for loop is<br></h5>
+                        <img src="https://drive.google.com/uc?id=1Xmeh0_VGwyGoSBJNjtaVMkV1dErqBHoe">
+                        <h5><br>How for loop works?<br></h5>
+                        <br>- คำสั่งเริ่มต้นจะดำเนินการเพียงครั้งเดียว<br>
+                        <br>- จากนั้นนิพจน์ทดสอบจะถูกตรวจสอบเงื่อนไข หากนิพจน์การทดสอบมีเงื่อนไขเป็นเท็จ การ for loop จะสิ้นสุดลง<br>
+                        <br>- หากนิพจน์การทดสอบถูกตรวจสอบเงื่อนไขว่าเป็นจริง คำสั่งภายในของ for loop จะถูกดำเนินการ และตรวจสอบเงื่อนไขเรื่อยๆจนกว่าจะวนครบ<br>
+                        <h5><br>for loop Flowchart<br></h5>
+                        <img src="https://drive.google.com/uc?id=1LajQ4JMQ20ntFQmcmKMTl82kPSWhwFKM">
+                        <br>Example 1: for loop<br>
+                        <img src="https://drive.google.com/uc?id=1wxrp4KUwrhiKNZ59-_qX2hFKfOXl5Jub">
+                        <br>Output<br>
+                        <img src="https://drive.google.com/uc?id=1wxrp4KUwrhiKNZ59-_qX2hFKfOXl5Jub">
+                        <br>1.เริ่มต้นเป็น 1<br>
+                        <br>2.i < 11 มีการตรวจสอบเงื่อนไข เนื่องจาก 1 น้อยกว่า 11 เป็นจริงคำสั่งภายในของ for loop จึงถูกดำเนินการ จะพิมพ์ 1 (ค่าของ i) บนหน้าจอ.<br>
+                        <br>3.คำสั่งอัพเดท ++i ถูกดำเนินการ ตอนนี้ค่าของ i จะเป็น 2 อีกครั้ง นิพจน์การทดสอบจะตรวจสอบเงื่อนไขว่าเป็นจริง <br> และดำเนินการคำสั่งของfor loop จะพิมพ์ 2 (ค่าของ i) บนหน้าจอ.<br>
+                        <br>4.คำสั่งการอัพเดท จะดำเนินการและ ตรวจสอบเงื่อนไข ++i นิพจน์การทดสอบ i < 11 กระบวนการนี้ดำเนินต่อไปจนถึงค่า i กลายเป็น 11<br>
+                        <br>5.เมื่อไหร่ค่า i กลายเป็น 11, i < 11 จะเป็นเท็จและ for loop จะสิ้นสุดลง<br>
+                        <br>Example 2: for loop<br>
+                        <img src="https://drive.google.com/uc?id=1ICmJa5ndxHwkV7fM0jkWnUN6rKugYgA6">
+                        <br>Output<br>
+                        <img src="https://drive.google.com/uc?id=1E0kgbtbUDXKZQJmGR0h5Gdb4rv7C2kEn">
+                        <br>ค่าที่ป้อนโดยผู้ใช้จะถูกเก็บไว้ในตัวแปร num สมมติว่าผู้ใช้ป้อน 10<br>
+                        ค่า count เริ่มต้นค่าเป็น 1 และตรวจสอบเงื่อนไข count<=num(1 น้อยกว่าหรือเท่ากับ 10) แล้วว่าเป็นจริง คำสั่งของ for loop จึงถูกดำเนินการและค่าของ sum จะเท่ากับ 1 <br>
+                        <br>จากนั้น คำสั่ง ++count จะเปลี่ยนค่าcountจาก 1 เป็น 2 (บวกเพิ่มไป 1) จะถูกตรวจสอบเงื่อนไข และ 2 มีค่าน้อยกว่า 10เงื่อนไขจึงเป็นจริงและดำเนินการคำสั่งของfor loop ตอนนี้ค่า sum จะเท่ากับ 3 กระบวนการนี้ดำเนินต่อไปและคำนวณผลรวมจนกระทั่งค่า count เป็น 11 เงื่อนไขถูกตรวจสอบถูกเป็น 0 (เท็จ) และสิ้นสุดการวนซ้ำ จากนั้นค่าของ sum จะถูกพิมพ์บนหน้าจอ<br>
+                        <br><br>
+                        <iframe width="480" height="320" src="https://www.youtube.com/embed/SvGVcnwfZe8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <BR id="while_Loop">
+                    </div>
+                </div>
+        <br></div>
+            <!--   Comments -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h2>while Loop</h2>
+                <!--   ## -->
+                <div class="box bg-light  mb-5 shadow" >
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <h2 id = 'Introduce'> while Loop </h2>
+                        <br>ในบทนี้ จะได้เรียนรู้การสร้าง while ในการเขียนโปรแกรม C โดยใช้ตัวอย่าง
+                        ในการเขียนโปรแกรม ใช้ loop เพื่อทำซ้ำบล็อกของโค้ดจนกว่าจะตรงตามเงื่อนไขที่ระบุ<br>
+                        <br>การเขียนโปรแกรม C มีลูปสามประเภท<br>
+                        <br>- For loop<br>
+                        <br>- While loop<br>
+                        <br>- Do…while loop<br>
+                        <br>ก่อนหน้านี้เราได้เรียนรู้เกี่ยวกับ for loop ในบทนี้เราจะเรียนรู้เกี่ยวกับ while<br>
+                        <h5><br>The syntax of the while loop is<br></h5>
+                        <br>- while loop ตรวจสอบเงื่อนไขใน testExpressionวงเล็บ()<br>
+                        <br>- ถ้า testExpression เป็นจริงคำสั่งใน while loop จะถูกดำเนินการ แล้ว testExpression ตรวจสอบอีกครั้ง<br>
+                        <br>- กระบวนการนี้ดำเนินต่อไปจนกว่า testExpression จะตรวจสอบเป็นเท็จ<br>
+                        <br>- หาก testExpression เป็นเท็จการวนซ้ำจะสิ้นสุดลง<br>
+                        <h5><br>Flowchart of while loop<br></h5>
+                        <img src="https://drive.google.com/uc?id=1LCB5zg4Wp_uBRvEnl6wMaMmiTyuW-i9A">
+                        <br>Example 1: while loop<br>
+                        <img src="https://drive.google.com/uc?id=1YBoYKYYIsi6o2e0hoB4HYLuDueNq39Ya">
+                        <br>Output<br>
+                        <img src="https://drive.google.com/uc?id=1EDt0VKPxBzB7mNNZqVsEjgLVqxEOFg3g">
+                        <br>ที่นี่เราได้เริ่มต้นฉันถึง 1<br>
+                        <br>1.เมื่อ i = 1 ตรวจสอบเงื่อนไข i <= 5 เป็นจริง ดังนั้นคำสั่งของ while loopจึงถูกดำเนินการ แสดง 1 บนหน้าจอและค่าของ i เพิ่มขึ้น<br>
+                        <br>2.ตอนนี้ i = 2 ตรวจสอบเงื่อนไข i <= 5 เป็นจริงอีกครั้ง คำสั่งของ loop ถูกดำเนินการอีกครั้ง แสดงค่าบนหน้าจอเป็น 2 และ i เพิ่มขึ้นเป็น 3<br>
+                        <br>3.กระบวนการนี้ดำเนินต่อไปจนค่า i กลายเป็น 6 จากนั้นตรวจสอบเงื่อนไข i <= 5 จะเป็นเท็จและสิ้นสุดการวนซ้ำ<br>
+                        <iframe width="480" height="320" src="https://www.youtube.com/embed/eXfeq7mj6PA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     <BR id="do_while_Loop">
+                    </div>
+                </div>
+        <br></div>
+        <!--   Identifier -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h2>do...while loop</h2>
+                <!--   ## -->
+                <div class="box bg-light  mb-5 shadow" >
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <h2 id = 'Introduce'> do while Loop </h2>
+                        <br>การ do..while loop คล้ายกับการทำwhile loop โดยมีความแตกต่างที่สำคัญอย่างหนึ่ง คำสั่งของdo...while loop ถูกดำเนินการอย่างน้อยหนึ่งครั้ง จากนั้นจึงเข้าเงื่อนไขตรวจสอบ<br>
+                        <h5><br>The syntax of the do...while loop is<br></h5>
+                        <img src="https://drive.google.com/uc?id=15I6Si2KE9aK6xlOb7pBa-o_hPHU_8gX_">
+                        <h5><br>How do...while loop works?<br></h5>
+                        <br>- คำสั่งของ do...while loop จะดำเนินการเพียงครั้งเดียว เท่านั้น testExpression จึงจะตรวจสอบ<br>
+                        <br>- ถ้า testExpression เป็นจริง คำสั่งของ loop จะถูกดำเนินการอีกครั้งและ testExpression จะตรวจสอบอีกครั้ง<br>
+                        <br>- กระบวนการนี้ดำเนินต่อไปจน testExpression กลายเป็นเท็จ<br>
+                        <br>- หาก testExpression เป็นเท็จการวนซ้ำจะสิ้นสุดลง<br>
+                        <h5><br>Flowchart of do...while Loop<br></h5>
+                        <img src="https://drive.google.com/uc?id=1T9dlr6NtmjSbw2Z9qoG3anivAC9MJF3i">
+                        <br>Example 2: do...while loop<br>
+                        <img src="https://drive.google.com/uc?id=13LpbnBWJ5B1pNheP-CL5syfZyH-alvel">
+                        <br>Output<br>
+                        <img src="https://drive.google.com/uc?id=1jtoz-XGhLxFXevactF55DLGhYi4oUI41">
+                        <br>ที่นี่เราใช้การdo...whileวนซ้ำเพื่อให้ผู้ใช้ป้อนตัวเลข วนซ้ำทำงานตราบเท่าที่หมายเลขอินพุตไม่ใช่ 0<br>
+                        <br>การ do...while loop จะดำเนินการอย่างน้อยหนึ่งครั้ง กล่าวคือ การวนซ้ำครั้งแรกทำงานโดยไม่ตรวจสอบเงื่อนไข เงื่อนไขจะได้รับการตรวจสอบหลังจากการทำซ้ำครั้งแรกเท่านั้น<br>
+                        <img src="https://drive.google.com/uc?id=1AfVrPsikf6gUTIKZyXFxTcwGRXWyXWlb">
+                        <br>ดังนั้นถ้าอินพุตแรกเป็นตัวเลขที่ไม่ใช่ศูนย์ ตัวเลขนั้นจะถูกเพิ่มลงในค่า sum ตัวแปรและลูปยังคงวนซ้ำต่อไป กระบวนการนี้จะทำซ้ำจนกว่าผู้ใช้จะอินพุตค่า 0 เข้ามา<br>
+                        <br>แต่ถ้าอินพุตแรกเป็น 0 จะไม่มีการวนซ้ำครั้งที่สองของลูปและ ค่า sum กลายเป็น 0.0<br>
+                        <br><br>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/QHNdV4LJzBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+        <br></div>
+        <button onclick="window.location.href='/course-Loop_Statement-quiz'" type="button" class="btn btn-outline-secondary btn-lg btn-block bg-light shadow" style="color:black" ><h2><u>แบบทดสอบย่อย</h2></u></button>
+        
+
+        
+
+        <br></div>
+        </div>
+    </div>
+
+
+    <!-- END Of MIDDLE  -->
+    </body>
+</html>
+
+

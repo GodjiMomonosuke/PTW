@@ -1,0 +1,1078 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    
+    <title>Post-Test</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('layouts/navbar') %>
+    <!-- end of Narbar-->
+    <style>
+        .img-thumbnail {
+            padding: 0.25rem;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            max-width: 100%;
+            height: 300px;
+        }
+    </style>
+<br><br><br>
+    <div id = "content" class="container">
+    <h2><u>แบบทดสอบหลังเรียน</u></h2>
+
+<%# START %> 
+<form action="course/posttestSubmit" method="post" autocomplete="off" >
+    <%# button %> 
+    <div class="btn-group me-2" role="group" aria-label="Basic outlined example">
+        <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
+        class="btn btn-secondary collapsed" data-bs-target="#test1" >1</button>
+        <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
+        class="btn btn-secondary collapsed" data-bs-target="#test2">2</button>
+        <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
+        class="btn btn-secondary collapsed" data-bs-target="#test3">3</button>
+        <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
+        class="btn btn-secondary collapsed" data-bs-target="#test4">4</button>
+        <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
+        class="btn btn-secondary collapsed" data-bs-target="#test5">5</button>
+        <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
+        class="btn btn-secondary collapsed" data-bs-target="#test6">6</button>
+        <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
+        class="btn btn-secondary collapsed" data-bs-target="#test7">7</button>
+        <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
+        class="btn btn-secondary collapsed" data-bs-target="#test8">8</button>
+        <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
+        class="btn btn-secondary collapsed" data-bs-target="#test9">9</button>
+        <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
+        class="btn btn-secondary collapsed" data-bs-target="#test10">10</button>
+        <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
+        class="btn btn-secondary collapsed" data-bs-target="#test11">11</button>
+    </div>
+        <button type="submit" class="btn btn-outline-dark">ส่งคำตอบ</button>
+
+<%# content %> 
+
+    <div class="accordion accordion-flush" id="accordionMain">
+    <%# %>
+        <div id="test0" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
+            <br><h2>แบบทดสอบหลังเรียน</h2>
+        </div>
+
+    <%# test1 %>
+    <div id="test1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
+        <%# choice %> 
+        <div class="row align-items-start">
+            <div>
+            <img src="https://drive.google.com/uc?id=18oDi84YM3sASZ-euMlMsWv8B55grHj1a" class="img-thumbnail rounded" >
+            <p>ใช้รูปนี้เพื่อตอบคำถามข้อ 1</p>
+            </div>
+            <div class="col">
+              <%# test %>         
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        1.1) จากโค้ด มีการวนซ้ำอยู่ทั้งหมดกี่ครั้ง
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="c11" id="c11o1" autocomplete="off" value="A" required >
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c11o1">
+                        ก.	9
+                    </label>
+                    <input type="radio" class="btn-check" name="c11" id="c11o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c11o2">
+                        ข.	10
+                    </label>
+                    <input type="radio" class="btn-check" name="c11" id="c11o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c11o3">
+                        ค.	4
+                    </label>
+                    <input type="radio" class="btn-check" name="c11" id="c11o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c11o4">
+                        ง.	1
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+              <%# test %>           
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        1.2) ถ้าลบคำสั่ง Break; ออกจะเกิดอะไรขึ้น
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="c12" id="c12o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c12o1">
+                        ก.	ไม่เกิดอะไรขึ้น
+                    </label>
+                    <input type="radio" class="btn-check" name="c12" id="c12o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c12o2">
+                        ข.	จะมีการวนซ้ำเกิดขึ้น 10 ครั้ง 
+                    </label>
+                    <input type="radio" class="btn-check" name="c12" id="c12o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c12o3">
+                        ค.	โค้ดเกิดการผิดพลาด
+                    </label>
+                    <input type="radio" class="btn-check" name="c12" id="c12o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c12o4">
+                        ง.	จะแสดงค่าไม่มีที่สิ้นสุด
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                <%# test %>           
+                <div class="list-group" style="width:125%;">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        1.3)เรียงลำดับการทำงานของ Code <br>
+                        &ensp;1. กำหนดเงื่อนไขการวน For…loop ขึ้นมา <br>
+                        &ensp;2. เรียกใช้ Library / 3. สร้างเงื่อนไข if / 4. สร้างตัวแปร <br>
+                        &ensp;5. สิ้นสุดการทำงานของฟังก์ชั่น / 6. เปิดฟังก์ชั่นหลัก
+        
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="c13" id="c13o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c13o1">
+                        ก. 5 1 6 2 7 4 3
+                    </label>
+                    <input type="radio" class="btn-check" name="c13" id="c13o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c13o2">
+                        ข. 5 2 7 3 4 1 6
+                    </label>
+                    <input type="radio" class="btn-check" name="c13" id="c13o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c13o3">
+                        ค. 5 4 1 6 8 2 3
+                    </label>
+                    <input type="radio" class="btn-check" name="c13" id="c13o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c13o4">
+                        ง. 5 2 3 4 6 5 1
+                    </label>
+                </div>
+            </div>
+        </div>
+        <%# choice %> 
+    </div>
+<%# test2 %>
+    <div id="test2" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
+        <%# choice %> 
+        <div class="row align-items-start">
+            <div>
+            <img src="https://drive.google.com/uc?id=1eNjXMJaczJRwxbxFLnOBMRziKr4BLdF2" class="img-thumbnail rounded"  >
+            <p>ใช้รูปนี้เพื่อตอบคำถามข้อ 2</p>
+            </div>
+            <div class="col">
+              <%# test %>         
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        2.1) จากโค้ด มีเงื่อนไข If…else กี่เงื่อนไข
+                    </p>
+
+                    <input type="radio" class="btn-check" name="c21" id="c21o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c21o1">
+                        ก.	1
+                    </label>
+                    <input type="radio" class="btn-check" name="c21" id="c21o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c21o2">
+                        ข.	2
+                    </label>
+                    <input type="radio" class="btn-check" name="c21" id="c21o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c21o3">
+                        ค.	3
+                    </label>
+                    <input type="radio" class="btn-check" name="c21" id="c21o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c21o4">
+                        ง.	4
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+              <%# test %>           
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        2.2) จากโค้ด จะแสดงค่าอะไรออกมา
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="c22" id="c22o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c22o1">
+                        ก.	Good morning
+                    </label>
+                    <input type="radio" class="btn-check" name="c22" id="c22o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c22o2">
+                        ข.	Good day
+                    </label>
+                    <input type="radio" class="btn-check" name="c22" id="c22o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c22o3">
+                        ค.	Good evening
+                    </label>
+                    <input type="radio" class="btn-check" name="c22" id="c22o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c22o4">
+                        ง.	Good night
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                <%# test %> 
+                <div class="list-group" style="width: 125%;">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        2.3) เรียงลำดับการทำงานของ Code <br>
+                        &ensp;1. เงื่อนไข time น้อยกว่า 10/2. ประกาศค่าตัวแปร<br>
+                        &ensp;3. เรียกใช้ Library/4. เปิดฟังก์ชั่นหลัก<br>
+                        &ensp;5. สิ้นสุดการทำงานของฟังก์ชั่น/6.เงื่อนไข time น้อยกว่า 22<br>
+                        &ensp;7. เงื่อนไขอื่นๆ
+                    </p>          
+                    <input type="radio" class="btn-check" name="c23" id="c23o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c23o1">
+                        ก.	3 4 6 1 7 5
+                    </label>
+                    <input type="radio" class="btn-check" name="c23" id="c23o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c23o2">
+                        ข.	3 4 1 6 7 5
+                    </label>
+                    <input type="radio" class="btn-check" name="c23" id="c23o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c23o3">
+                        ค.	3 4 7 1 6 5
+                    </label>
+                    <input type="radio" class="btn-check" name="c23" id="c23o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c23o4">
+                        ง.	3 4 7 6 1 5
+                    </label>
+                </div>
+            </div>
+        </div>
+        <%# choice %> 
+    </div>
+<%# test3 %>
+    <div id="test3" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
+        <%# choice %> 
+        <div class="row align-items-start">
+            <div>
+            <img src="https://drive.google.com/uc?id=1FnX3QJUqWXc5sCKJaiMZY-MXZ-ULPX3c" class="img-thumbnail rounded"  >
+            <p>ใช้รูปนี้เพื่อตอบคำถามข้อ 3</p>
+            </div>
+            <div class="col">
+              <%# test %>         
+                <div class="list-group" >
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        3.1) จากโค้ด โปรแกรมมีหน้าที่ ทำอะไร
+                    </p>
+
+                    <input type="radio" class="btn-check" name="c31" id="c31o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c31o1">
+                        ก.	คูณ
+                    </label>
+                    <input type="radio" class="btn-check" name="c31" id="c31o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c31o2">
+                        ข.	ยกกำลัง
+                    </label>
+                    <input type="radio" class="btn-check" name="c31" id="c31o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c31o3">
+                        ค.	บวก
+                    </label>
+                    <input type="radio" class="btn-check" name="c31" id="c31o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c31o4">
+                        ง.	ลบ
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+              <%# test %>           
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        3.2) ค่าที่ได้จากโปรแกรมนี้คือค่าอะไร
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="c32" id="c32o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c32o1">
+                        ก.	8
+                    </label>
+                    <input type="radio" class="btn-check" name="c32" id="c32o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c32o2">
+                        ข.	5
+                    </label>
+                    <input type="radio" class="btn-check" name="c32" id="c32o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c32o3">
+                        ค.	6
+                    </label>
+                    <input type="radio" class="btn-check" name="c32" id="c32o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c32o4">
+                        ง.	1
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                <%# test %>           
+                <div class="list-group" style="width: 120%;">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        3.3) เรียงลำดับการทำงานของ Code <br>
+                        &ensp;1. แสดงค่าผลลัพธ์ / 2. เปิดฟังก์ชันหลัก <br>
+                        &ensp;3. เรียกใช้ Library / 4. ประกาศตัวแปร<br>
+                        &ensp;5. สิ้นสุดการทำงานฟังก์ชัน 
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="c33" id="c33o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c33o1">
+                        ก.	3 2 1 4 5
+                    </label>
+                    <input type="radio" class="btn-check" name="c33" id="c33o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c33o2">
+                        ข.	3 4 2 1 5
+                    </label>
+                    <input type="radio" class="btn-check" name="c33" id="c33o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c33o3">
+                        ค.	3 4 1 2 5
+                    </label>
+                    <input type="radio" class="btn-check" name="c33" id="c33o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c33o4">
+                        ง.	3 2 4 1 5
+                    </label>
+                </div>
+            </div>
+        </div>
+        <%# choice %> 
+    </div>
+<%# test4 %>
+    <div id="test4" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
+        <%# choice %> 
+        <div class="row align-items-start">
+            <div>
+            <img src="https://drive.google.com/uc?id=1Olt5uZiEdvNuRQZyuhNG-e085p1crVZT" class="img-thumbnail rounded"  >
+            <p>ใช้รูปนี้เพื่อตอบคำถามข้อ 4</p>
+            </div>
+            <div class="col">
+              <%# test %>         
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        4.1) จากโค้ด  มี Case ทั้งหมดกี่ Case
+                    </p>
+
+                    <input type="radio" class="btn-check" name="c41" id="c41o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c41o1">
+                        ก.	4
+                    </label>
+                    <input type="radio" class="btn-check" name="c41" id="c41o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c41o2">
+                        ข.	6
+                    </label>
+                    <input type="radio" class="btn-check" name="c41" id="c41o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c41o3">
+                        ค.	7
+                    </label>
+                    <input type="radio" class="btn-check" name="c41" id="c41o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c41o4">
+                        ง.	8
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+              <%# test %>           
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        4.2) int day = 4;  จะแสดงคำสั่งอะไรออกมา
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="c42" id="c42o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c42o1">
+                        ก.	Tuesday
+                    </label>
+                    <input type="radio" class="btn-check" name="c42" id="c42o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c42o2">
+                        ข.	Saturday
+                    </label>
+                    <input type="radio" class="btn-check" name="c42" id="c42o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c42o3">
+                        ค.	Thurseday
+                    </label>
+                    <input type="radio" class="btn-check" name="c42" id="c42o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c42o4">
+                        ง.	Monday
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                <%# test %>           
+                <div class="list-group" style="width: 125%;">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        4.3) เรียงลำดับการทำงานของ Code <br>
+                        &ensp;1. เปิดฟังก์ชั่นหลัก / 2. สิ้นสุดการทำงานของฟังก์ชั่น<br>
+                        &ensp;3. เรียกใช้ Library / 4. สร้างตัวแปร <br>
+                        &ensp;5. เขียนเงื่อนไข Switch Case
+                    </p>
+                    
+                    
+                    <input type="radio" class="btn-check" name="c43" id="c43o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c43o1">
+                        ก.	3 2 4 1 5
+                    </label>
+                    <input type="radio" class="btn-check" name="c43" id="c43o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c43o2">
+                        ข.	3 4 5 1 2 
+                    </label>
+                    <input type="radio" class="btn-check" name="c43" id="c43o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c43o3">
+                        ค.	3 1 4 5 2
+                    </label>
+                    <input type="radio" class="btn-check" name="c43" id="c43o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c43o4">
+                        ง.	3 4 1 5 2
+                    </label>
+                </div>
+            </div>
+        </div>
+        <%# choice %> 
+    </div>
+<%# test5 %>
+    <div id="test5" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
+        <%# choice %> 
+        <div class="row align-items-start">
+            <div>
+            <img src="https://drive.google.com/uc?id=1Bl2-Gp-aoaiZ12cqOP5zcnOEl2bmexe3" class="img-thumbnail rounded"  >
+            <p>ใช้รูปนี้เพื่อตอบคำถามข้อ 5</p>
+            </div>
+            <div class="col">
+              <%# test %>         
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        5.1) จากโค้ดจะมีค่าที่แสดงทั้งหมดกี่ค่า
+                    </p>
+
+                    <input type="radio" class="btn-check" name="c51" id="c51o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c51o1">
+                        1.	1
+                    </label>
+                    <input type="radio" class="btn-check" name="c51" id="c51o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c51o2">
+                        2.	6
+                    </label>
+                    <input type="radio" class="btn-check" name="c51" id="c51o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c51o3">
+                        3.	4
+                    </label>
+                    <input type="radio" class="btn-check" name="c51" id="c51o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c51o4">
+                        4.	11
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+              <%# test %>           
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        5.2) โค้ดที่เท่าไหร่ถึงบ่งบอกถึงจำนวนค่าที่จะแสดง
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="c52" id="c52o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c52o1">
+                        ก. 5
+                    </label>
+                    <input type="radio" class="btn-check" name="c52" id="c52o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c52o2">
+                        ข. 7
+                    </label>
+                    <input type="radio" class="btn-check" name="c52" id="c52o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c52o3">
+                        ค. 8
+                    </label>
+                    <input type="radio" class="btn-check" name="c52" id="c52o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c52o4">
+                        ง. 4
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                <%# test %>           
+                <div class="list-group" style="width: 155%;">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        5.3) เรียงลำดับการทำงานของ Code <br>
+                        &ensp;1. กำหนดจำนวนการวนซ้ำใน For…loop / 2. ประกาศตัวแปร <br>
+                        &ensp;3. สิ้นสุดการทำงานของฟังก์ชัน / 4. Print ค่าออกมา<br>
+                        &ensp;5. เรียกใช้ Library / 6. เปิดฟังก์ชันหลัก / 7. สร้างชุดข้อมูล Array
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="c53" id="c53o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c53o1">
+                        ก.	5 6 7 1 2 4 3 
+                    </label>
+                    <input type="radio" class="btn-check" name="c53" id="c53o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c53o2">
+                        ข.	5 6 7 2 1 4 3
+                    </label>
+                    <input type="radio" class="btn-check" name="c53" id="c53o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c53o3">
+                        ค.	5 6 7 4 1 2 3
+                    </label>
+                    <input type="radio" class="btn-check" name="c53" id="c53o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c53o4">
+                        ง.	5 6 7 4 2 1 3
+                    </label>
+                </div>
+            </div>
+        </div>
+        <%# choice %> 
+    </div>
+<%# test6 %>
+    <div id="test6" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
+        <%# choice %> 
+        <div class="row align-items-start">
+            <div>
+            <img src="https://drive.google.com/uc?id=1Vv1kb4rTwFc_qZSDa9nupI92d0BILsjR" class="img-thumbnail rounded"  >
+            <p>ใช้รูปนี้เพื่อตอบคำถามข้อ 6</p>
+            </div>
+            <div class="col">
+              <%# test %>         
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        6.1) จาก code โปรแกรมนี้เป็นการรับค่าและแสดงผลประเภทอะไร
+                    </p>
+
+                    <input type="radio" class="btn-check" name="c61" id="c61o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c61o1">
+                        ก. Character
+                    </label>
+                    <input type="radio" class="btn-check" name="c61" id="c61o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c61o2">
+                        ข. Pointer
+                    </label>
+                    <input type="radio" class="btn-check" name="c61" id="c61o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c61o3">
+                        ค. Integer	
+                    </label>
+                    <input type="radio" class="btn-check" name="c61" id="c61o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c61o4">
+                        ง. Floating, double
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+              <%# test %>           
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        6.2) จากโค้ดนี้บรรทัดใดเป็นรับค่าจากคีย์บอร์ด
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="c62" id="c62o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c62o1">
+                        ก.	4
+                    </label>
+                    <input type="radio" class="btn-check" name="c62" id="c62o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c62o2">
+                        ข.	6
+                    </label>
+                    <input type="radio" class="btn-check" name="c62" id="c62o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c62o3">
+                        ค.	7
+                    </label>
+                    <input type="radio" class="btn-check" name="c62" id="c62o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c62o4">
+                        ง.	8
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                <%# test %>           
+                <div class="list-group" style="width: 125%;">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        6.3) เรียงลำดับการทำงานของ Code <br>
+                        &ensp;1. เปิดฟังก์ชันหลัก / 2. Print ใส่ข้อมูลตัวเลข<br>
+                        &ensp;3. สิ้นสุดการทำงานของฟังก์ชัน / 4. Print ค่าออกมา<br>
+                        &ensp;5. เรียกใช้ Library /6.รับค่าจากคีย์บอร์ด<br>
+                        &ensp;7.ประกาศตัวแปร user_input
+                    </p>
+
+                    <input type="radio" class="btn-check" name="c63" id="c63o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c63o1">
+                        ก.	5 1 6 2 7 4 3 
+                    </label>
+                    <input type="radio" class="btn-check" name="c63" id="c63o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c63o2">
+                        ข. 5 2 7 3 4 1 6 
+                    </label>
+                    <input type="radio" class="btn-check" name="c63" id="c63o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c63o3">
+                        ค.	5 4 1 6 8 2 3	
+                    </label>
+                    <input type="radio" class="btn-check" name="c63" id="c63o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c63o4">
+                        ง.	5 2 3 4 6 5 1
+                    </label>
+                </div>
+            </div>
+        </div>
+        <%# choice %> 
+    </div>
+<%# test7 %>
+    <div id="test7" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
+        <%# choice %> 
+        <div class="row align-items-start">
+            <div>
+            <img src="https://drive.google.com/uc?id=1FtsgSNY4PMlSJbH7NwMWTE2kykRTPk_z" class="img-thumbnail rounded"  >
+            <p>ใช้รูปนี้เพื่อตอบคำถามข้อ 7</p>
+            </div>
+            <div class="col">
+              <%# test %>         
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        7.1) จากโค้ด ข้อใดคือผลลัพธ์ที่ได้จากโค้ด
+                    </p>
+
+                    <input type="radio" class="btn-check" name="c71" id="c71o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c71o1">
+                        ก.	A
+                    </label>
+                    <input type="radio" class="btn-check" name="c71" id="c71o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c71o2">
+                        ข.	Ch
+                    </label>
+                    <input type="radio" class="btn-check" name="c71" id="c71o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c71o3">
+                        ค.	ch
+                    </label>
+                    <input type="radio" class="btn-check" name="c71" id="c71o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c71o4">
+                        ง.	PCh
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+              <%# test %>           
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        7.2) จากโค้ดบรรทัดใดที่แสดงค่าของ Address
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="c72" id="c72o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c72o1">
+                        ก.	8
+                    </label>
+                    <input type="radio" class="btn-check" name="c72" id="c72o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c72o2">
+                        ข.	9
+                    </label>
+                    <input type="radio" class="btn-check" name="c72" id="c72o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c72o3">
+                        ค.	10
+                    </label>
+                    <input type="radio" class="btn-check" name="c72" id="c72o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c72o4">
+                        ง.	11
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                <%# test %>           
+                <div class="list-group" style="width: 125%;">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        7.3) เรียงลำดับการทำงานของ Code <br>
+                        &ensp;1. เปิดฟังก์ชันหลัก / 2. ประกาศตัวแปร  <br>
+                        &ensp;3. สิ้นสุดการทำงานของฟังก์ชัน / 4. Print ค่าออกมา <br>
+                        &ensp;5. เรียกใช้ Library / 6. Print ค่าที่อยู่ออกมา
+                     
+                    </p>
+                    <input type="radio" class="btn-check" name="c73" id="c73o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c73o1">
+                        ก.	5 1 2 4 6 3
+                    </label>
+                    <input type="radio" class="btn-check" name="c73" id="c73o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c73o2">
+                        ข.	5 1 2 6 4 3
+                    </label>
+                    <input type="radio" class="btn-check" name="c73" id="c73o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c73o3">
+                        ค.	5 1 6 2 4 3
+                    </label>
+                    <input type="radio" class="btn-check" name="c73" id="c73o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c73o4">
+                        ง.	5 1 4 6 2 3
+                    </label>
+                </div>
+            </div>
+        </div>
+        <%# choice %> 
+    </div>
+<%# test8 %>
+    <div id="test8" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
+        <%# choice %> 
+        <div class="row align-items-start">
+            <div>
+            <img src="https://drive.google.com/uc?id=1bIixGNGJp_nEqQghGvHIlP2CzjN1kQnW" class="img-thumbnail rounded"  >
+            <p>ใช้รูปนี้เพื่อตอบคำถามข้อ 8</p>
+            </div>
+            <div class="col">
+              <%# test %>         
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        8.1) จากโค้ด จะแสดงค่าอะไร
+                    </p>
+
+                    <input type="radio" class="btn-check" name="c81" id="c81o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c81o1">
+                        ก.	Hello World!
+                    </label>
+                    <input type="radio" class="btn-check" name="c81" id="c81o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c81o2">
+                        ข.	H
+                    </label>
+                    <input type="radio" class="btn-check" name="c81" id="c81o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c81o3">
+                        ค.	0
+                    </label>
+                    <input type="radio" class="btn-check" name="c81" id="c81o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c81o4">
+                        ง.	%c
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+              <%# test %>           
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        8.2) W อยู่ใน Array ลำกับที่เท่าไหร่ 
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="c82" id="c82o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c82o1">
+                        ก.	4
+                    </label>
+                    <input type="radio" class="btn-check" name="c82" id="c82o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c82o2">
+                        ข. 5
+                    </label>
+                    <input type="radio" class="btn-check" name="c82" id="c82o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c82o3">
+                        ค. 6
+                    </label>
+                    <input type="radio" class="btn-check" name="c82" id="c82o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c82o4">
+                        ง. 7
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                <%# test %>           
+                <div class="list-group" style="width:120%;">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        8.3) เรียงลำดับการทำงานของ Code<br>
+                        &ensp;1. สิ้นสุดการทำงานของฟังก์ชัน / 2. ประกาศค่าใน array<br>
+                        &ensp;3. เรียกใช้ Library / 4. เปิดฟังก์ชั่นหลัก <br>
+                        &ensp;5. แสดงค่าใน array จากคำสั่ง printf
+
+                    </p>
+                    <input type="radio" class="btn-check" name="c83" id="c83o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c83o1">
+                        ก.	3 4 2 5 1 
+                    </label>
+                    <input type="radio" class="btn-check" name="c83" id="c83o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c83o2">
+                        ข.	3 4 5 2 1 
+                    </label>
+                    <input type="radio" class="btn-check" name="c83" id="c83o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c83o3">
+                        ค.	3 2 5 4 1 
+                    </label>
+                    <input type="radio" class="btn-check" name="c83" id="c83o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c83o4">
+                        ง.	3 5 4 2 1 
+                    </label>
+                </div>
+            </div>
+        </div>
+        <%# choice %> 
+    </div>
+<%# test9 %>
+    <div id="test9" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
+        <%# choice %> 
+        <div class="row align-items-start">
+            <div>
+            <img src="https://drive.google.com/uc?id=16xFiqT7j1Z_Gy7nnQLtYNvmco5usfNq3" class="img-thumbnail rounded"  >
+            <p>ใช้รูปนี้เพื่อตอบคำถามข้อ 9
+             </p>
+            </div>
+            <div class="col">
+              <%# test %>         
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        9.1) จากโค้ด ถ้าเราเปลี่ยนค่า mynum ของ s1 เราควรเปลี่ยนที่บรรทัดใด
+                    </p>
+
+                    <input type="radio" class="btn-check" name="c91" id="c91o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c91o1">
+                        ก.	11
+                    </label>
+                    <input type="radio" class="btn-check" name="c91" id="c91o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c91o2">
+                        ข.	15
+                    </label>
+                    <input type="radio" class="btn-check" name="c91" id="c91o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c91o3">
+                        ค.	17
+                    </label>
+                    <input type="radio" class="btn-check" name="c91" id="c91o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c91o4">
+                        ง.	21
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+              <%# test %>           
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        9.2) จากโค้ดนี้ บรรทัดใดคือค่าที่ได้ของ s2 จากโค้ดนี้
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="c92" id="c92o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c92o1">
+                        ก. 15
+                    </label>
+                    <input type="radio" class="btn-check" name="c92" id="c92o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c92o2">
+                        ข. 13
+                    </label>
+                    <input type="radio" class="btn-check" name="c92" id="c92o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c92o3">
+                        ค. 22
+                    </label>
+                    <input type="radio" class="btn-check" name="c92" id="c92o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c92o4">
+                        ง. 11
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                <%# test %>           
+                <div class="list-group" style="width: 155%;">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        9.3) เรียงลำดับการทำงานของ Code <br>
+                        &ensp;1.เปิดฟังก์ชันหลัก / 2.สิ้นสุดการทำงานของฟังก์ชัน <br>
+                        &ensp;3.เรียกใช้ Library / 4.สร้าชุดข้อมูลของ Structure<br>
+                        &ensp;5.สร้างตัวแปรของ Structure ขึ้นมา/6. เปรียบเทียบสมการ/7.Print ค่าออกมา<br>
+                        &ensp;8. เปลี่ยนค่าข้อมูลของ Structure / 9. สร้าง Structure ตัวที่ 2 ขึ้นมา
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="c93" id="c93o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c93o1">
+                        ก.	3 5 1 4 6 9 8 7 2
+                    </label>
+                    <input type="radio" class="btn-check" name="c93" id="c93o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c93o2">
+                        ข.	3 5 1 4 9 6 8 7 2
+                    </label>
+                    <input type="radio" class="btn-check" name="c93" id="c93o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c93o3">
+                        ค.	3 5 1 4 9 6 7 8 2
+                    </label>
+                    <input type="radio" class="btn-check" name="c93" id="c93o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c93o4">
+                        ง.	3 5 1 4 9 8 7 6 2
+                    </label>
+                </div>
+            </div>
+        </div>
+        <%# choice %> 
+    </div>
+<%# test10 %>
+    <div id="test10" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
+        <%# choice %> 
+        <div class="row align-items-start">
+            <div>
+            <img src="https://drive.google.com/uc?id=1FuhbMXBxUp_ZZVHFt2VEFc81utRn0IjD" class="img-thumbnail rounded"  >
+            <p>ใช้รูปนี้เพื่อตอบคำถามข้อ 10</p>
+            </div>
+            <div class="col">
+              <%# test %>         
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        10.1) จากโค้ด มีกี่ฟังก์ชัน
+                    </p>
+
+                    <input type="radio" class="btn-check" name="c101" id="c101o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c101o1">
+                        ก. 1
+                    </label>
+                    <input type="radio" class="btn-check" name="c101" id="c101o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c101o2">
+                        ข. 3
+                    </label>
+                    <input type="radio" class="btn-check" name="c101" id="c101o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c101o3">
+                        ค. 4
+                    </label>
+                    <input type="radio" class="btn-check" name="c101" id="c101o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c101o4">
+                        ง. 2
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+              <%# test %>           
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        10.2) มีการเรียกใช้ฟังก์ชันอยู่ในบรรทัดที่เท่าไหร่
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="c102" id="c102o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c102o1">
+                        ก.	11
+                    </label>
+                    <input type="radio" class="btn-check" name="c102" id="c102o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c102o2">
+                        ข.	8
+                    </label>
+                    <input type="radio" class="btn-check" name="c102" id="c102o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c102o3">
+                        ค.	7
+                    </label>
+                    <input type="radio" class="btn-check" name="c102" id="c102o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c102o4">
+                        ง.	3
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                <%# test %>           
+                    <div class="list-group" style="width: 120%;">
+                        <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                            10.3) เรียงลำดับการทำงานของ Code <br>
+                            &ensp;1. เปิดฟังก์ชันหลัก / 2. เรียกใช้ฟังก์ชัน Myfunction<br>
+                            &ensp;3. เปิดฟังก์ชั่น Myfunction2 / 4. ปริ้นค่า 1 <br>
+                            &ensp;5. เปิดฟังก์ชั่น Myfunction / 6. ปริ้นค่า 2<br>
+                            &ensp;7. เรียกใช้ Library / 8. กำหนดรูปแปปฟังก์ชัน <br>
+                            &ensp;9. เปิดฟังก์ชั่น Myfunction3 / 10. ปริ้นค่า 3
+                        </p>
+                    <input type="radio" class="btn-check" name="c103" id="c103o1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c103o1">
+                        ก.	7 1 8 2 5 6 3 9 4 10
+                    </label>
+                    <input type="radio" class="btn-check" name="c103" id="c103o2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c103o2">
+                        ข.	7 1 2 8 5 6 3 9 4 10
+                    </label>
+                    <input type="radio" class="btn-check" name="c103" id="c103o3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c103o3">
+                        ค.	7 1 6 8 5 2 3 9 4 10 
+                    </label>
+                    <input type="radio" class="btn-check" name="c103" id="c103o4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c103o4">
+                        ง.	7 8 1 2 5 6 3 9 4 10
+                    </label>
+                </div>
+            </div>
+        </div> 
+        <%# choice %> 
+    </div>
+<%# test10 %>
+<div id="test11" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
+    <%# choice %> 
+    <div class="row align-items-start">
+        <div>
+        <img src="https://drive.google.com/uc?id=1U-oPXCSAmVLXVsLEZEPkcKbqZDj2BF1k" class="img-thumbnail rounded"  >
+        <p>ใช้รูปนี้เพื่อตอบคำถามข้อ 11</p>
+        </div>
+        <div class="col">
+          <%# test %>         
+            <div class="list-group">
+                <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                    11.1) จากโค้ด จะมีการวนซ้ำของโค้ดกี่ครั้ง
+                </p>
+
+                <input type="radio" class="btn-check" name="c111" id="c111o1" autocomplete="off" value="A" required>
+                <label class="list-group-item btn-outline-dark list-group-item-action" for="c111o1">
+                    ก.	3
+                </label>
+                <input type="radio" class="btn-check" name="c111" id="c111o2" autocomplete="off" value="B">
+                <label class="list-group-item btn-outline-dark list-group-item-action" for="c111o2">
+                    ข.	4
+                </label>
+                <input type="radio" class="btn-check" name="c111" id="c111o3" autocomplete="off" value="C">
+                <label class="list-group-item btn-outline-dark list-group-item-action" for="c111o3">
+                    ค.	5
+                </label>
+                <input type="radio" class="btn-check" name="c111" id="c111o4" autocomplete="off" value="D">
+                <label class="list-group-item btn-outline-dark list-group-item-action" for="c111o4">
+                    ง.	6
+                </label>
+            </div>
+        </div>
+        <div class="col">
+          <%# test %>           
+            <div class="list-group">
+                <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                    11.2) ถ้าลบบรรทัดที่ 9 ออกไปโปรแกรมจะเกิดอะไรขึ้น
+                </p>
+                
+                <input type="radio" class="btn-check" name="c112" id="c112o1" autocomplete="off" value="A" required>
+                <label class="list-group-item btn-outline-dark list-group-item-action" for="c112o1">
+                    ก.	การทำงานผิดพลาด
+                </label>
+                <input type="radio" class="btn-check" name="c112" id="c112o2" autocomplete="off" value="B">
+                <label class="list-group-item btn-outline-dark list-group-item-action" for="c112o2">
+                    ก.	การทำงานผิดพลาด
+                </label>
+                <input type="radio" class="btn-check" name="c112" id="c112o3" autocomplete="off" value="C">
+                <label class="list-group-item btn-outline-dark list-group-item-action" for="c112o3">
+                    ค.	วนซ้ำแค่ครั้งเดียว
+                </label>
+                <input type="radio" class="btn-check" name="c112" id="c112o4" autocomplete="off" value="D">
+                <label class="list-group-item btn-outline-dark list-group-item-action" for="c112o4">
+                    ง.	วนซ้ำไม่มีที่สิ้นสุด
+                </label>
+            </div>
+        </div>
+        <div class="col">
+            <%# test %>           
+                <div class="list-group" style="width: 125%;">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        11.3) เรียงลำดับการทำงานของ Code <br>
+                        &ensp;1.เปิดฟังก์ชันหลัก / 2.Print ค่าออกมา  <br>
+                        &ensp;3. เรียกใช้ Library / 4.ประกาศตัวแปร <br>
+                        &ensp;5. สิ้นสุดการทำงานของฟังก์ชัน <br>
+                        &ensp;6. กำหนดจำนวนการวนซ้ำใน While…loop 
+                     
+                    </p>
+                <input type="radio" class="btn-check" name="c113" id="c113o1" autocomplete="off" value="A" required>
+                <label class="list-group-item btn-outline-dark list-group-item-action" for="c113o1">
+                    ก.	3 1 2 4 6 5 
+                </label>
+                <input type="radio" class="btn-check" name="c113" id="c113o2" autocomplete="off" value="B">
+                <label class="list-group-item btn-outline-dark list-group-item-action" for="c113o2">
+                    ข.	3 1 4 2 6 5 
+                </label>
+                <input type="radio" class="btn-check" name="c113" id="c113o3" autocomplete="off" value="C">
+                <label class="list-group-item btn-outline-dark list-group-item-action" for="c113o3">
+                    ค.	3 1 4 6 2 5 
+                </label>
+                <input type="radio" class="btn-check" name="c113" id="c113o4" autocomplete="off" value="D">
+                <label class="list-group-item btn-outline-dark list-group-item-action" for="c113o4">
+                    ง.	3 1 2 6 4 5 
+                </label>
+            </div>
+        </div>
+    </div> 
+    <%# choice %> 
+</div>
+
+
+<%#  END %> 
+</form>
+        
+    </body>
+    </html>

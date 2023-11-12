@@ -1,0 +1,43 @@
+<div id = "content" class="container">
+    <h1>แบบทดสอบ (คะแนน)</h1>
+    <div class="box bg-light  mb-5 shadow" >
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Course</th>
+                        <th scope="col">ก่อนเรียน</th>
+                        <th scope="col">หลังเรียน</th>
+                        <th scope="col">พัฒนาการ</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+
+                            <% for (let i = 0; i < Object.keys(infoPrePostTest[0].Name).length; i++) {   %>
+
+                                <td><%= infoPrePostTest[0].Name[i] %></td>
+                                <td><%= infoPrePostTest[1].Pre[i] %></td>
+                                <td><%= infoPrePostTest[2].Post[i] %></td>
+                                <td>
+                                    <% if (infoPrePostTest[1].Pre[i] < infoPrePostTest[2].Post[i] ) { %>
+                                        😄
+                                    <% }%>
+                                    <% if (infoPrePostTest[1].Pre[i] > infoPrePostTest[2].Post[i] ) { %>
+                                        😥
+                                    <% }%>
+                                    <% if (infoPrePostTest[1].Pre[i] === infoPrePostTest[2].Post[i] ) { %>
+                                        😐
+                                    <% }%>
+                                </td>
+
+                                <tr></tr>
+                                
+                               
+                            <%} %>
+                        
+
+                    </tbody>
+                </table>
+            </div>
+
+</div>

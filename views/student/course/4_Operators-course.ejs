@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <title>Operators</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+    <!-- LEFT -->
+    <%- include('../layouts/course-list') %>
+    <!-- END OF LEFT-->
+
+    <!-- MIDDLE 1 -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .breadcrumb {
+            margin-bottom: 0;
+            background-color: white;
+            }
+        .blockquote-footer {
+            color:black;
+        }
+    </style>
+    <a id="Operators"></a>
+    <!-- MIDDLE 1 -->
+    <div class="content">
+        <div id = "content" class="container">
+            <h1>Operators</h1>
+    <!--   C Language -->
+            <div class="accordion" id="accordionParentSyntax">
+                <!--   Token -->
+                <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                    <!--   ## -->
+                    <div class="box bg-light  mb-5 shadow" >
+                        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                            <h2 id = ''> Operators </h2>
+                            <br>ตัวดำเนินการเป็นสัญลักษณ์ที่บอกให้คอมไพเลอร์ดำเนินการเฉพาะฟังก์ชันทางคณิตศาสตร์หรือตรรกะ ภาษา C มี Operators มากมาย<br>
+                            <br>C  Operators ​มี​ทั้งหมด 6 ประเภทดังนี้<br>
+                            <br>1. Arithmetic Operators <br>
+                            <br>2. Relational Operators <br>
+                            <br>3. Logical ​Operators    <br>
+                            <br>4. ​Bitwise​ ​Operators <br>
+                            <br>5.​ ​Assignment​ ​Operators <br>
+                            <br>6. Misc​ ​Operators <br>
+                            <BR id="Arithmetic">
+                        </div>
+                    </div>
+            <br ></div>
+                <!--   Token -->
+                <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                    <h2 >Arithmetic​ ​Operators </h2>
+                    <!--   ## -->
+                    <div class="box bg-light  mb-5 shadow" >
+                        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                            <h2 id = 'Introduce'> Arithmetic​ ​Operators </h2>
+                            <br>เป็นตัวดำเนินการคำนวณทางคณิตศาสตร์ เช่น การบวก การลบ การคูณ การหาร ฯลฯ บนค่าตัวเลข (ค่าคงที่และตัวแปร)<br>
+                            <img src="https://drive.google.com/uc?id=1ncXRt7J5G9-eAKlTmhU7qjivubJBt8vL" width="500" height="300">
+                            <br><br>
+                            <br>ตัวอย่าง: <img src="https://drive.google.com/uc?id=1F2iYqp-Vys8_YiinDBOASn1cIC_VDhBR">
+                            <br><br>
+                            <br>Output: <img src="https://drive.google.com/uc?id=1d-HwqJrEWayQAFp4_eY_umgySGChRc89">
+                            <br><br>
+                            <br>ค่าการบวก ลบ และคูณ จะถูกแสดงค่าออกมาตามปกติ แต่ในส่วนของค่าที่ได้จากการหาร ค่าที่เป็นเศษจะถูกตัดออก เว้นแต่เราจะประกาศค่าตัวแปรให้แสดงทศนิยมได้ และสุดท้ายการ mod หรือ มอดุโล(%) จะเป็นการแสดงค่าเศษที่ได้จากการหาร เหมือนในตัวอย่าง เช่น 9/4 = 2 เศษ 1 โปรแกรมจะแสดงค่าออกมาเป็น 1<br>
+                            <br><br>
+                            <img src="https://drive.google.com/uc?id=1kq7EvZYQV51xMCKV3sqDnaq06wOslhYR">
+                            <br><br>
+                            <iframe width="480" height="320" src="https://www.youtube.com/embed/5JXcX0IqRUo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                            <BR id="Relational">
+                        </div>
+                    </div>
+            <br ></div>
+            <!--   Semicolons -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h2 >Relational​ ​Operators</h2>
+                <!--   ## -->
+                <div class="box bg-light  mb-5 shadow" >
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <h2 id = 'Introduce'> Relational​ ​Operators </h2>
+                        <br>เป็นตัวดำเนินการเชิงสัมพันธ์ตรวจสอบความสัมพันธ์ระหว่างตัวแปรสองตัว เมื่อความสัมพันธ์เป็นจริงค่าจะเป็น 1 ถ้าความสัมพันธ์เป็นเท็จค่าจะเป็น 0 ตัวดำเนินการเชิงสัมพันธ์ถูกใช้ในโปรแกรมที่มีการเขียนเงื่อนไขหรือการทำซ้ำ<br>
+                        <img src="https://drive.google.com/uc?id=10IoPURrmpxVlt8HOQa410ZKNL_3BVilS" width="600" height="300">
+                        <br>ตัวอย่าง Relational Operators<br>
+                        <img src="https://drive.google.com/uc?id=1ViXANGgriLru1-2DviQA8LMOLSkJ0MKj">
+                        <br>Output<br>
+                        <img src="https://drive.google.com/uc?id=1Po6TVK9z9QaZpwP_2CdY1awRxDhGkqOq">
+                        <br><br>
+                        <iframe width="480" height="320" src="https://www.youtube.com/embed/1oKRTjw0yuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <BR id="Logical">
+                    </div>
+                </div>
+        <br></div>
+            <!--   Comments -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h2>Logical​ ​Operators</h2>
+                <!--   ## -->
+                <div class="box bg-light  mb-5 shadow" >
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <h2 id = 'Introduce'> Logical Operators </h2>
+                        <br>นิพจน์ที่มีตัวดำเนินการเชิงตรรกะส่งกลับค่า 0 หรือ 1 ขึ้นอยู่กับว่านิพจน์ให้ผลลัพธ์เป็นจริงหรือเท็จ ตัวดำเนินการเชิงตรรกะมักใช้ในโปรแกรมที่มีการสร้างเงื่อนไข<br>
+                        <img src="https://drive.google.com/uc?id=1VNUo63PcOIhe_XF8KsIT1sKmEESbynnr">
+                        <br>ตัวอย่าง Logical Operators<br>
+                        <img src="https://drive.google.com/uc?id=12AdU1DqHpSDukE8-3frUd1eiGzNZ8yrg">
+                        <br>Output<br>
+                        <img src="https://drive.google.com/uc?id=1H-BTiqmgP_JyFW5m20xy3Q_cjDywJ_HF">
+                        <br><br>
+                        <iframe width="480" height="320" src="https://www.youtube.com/embed/WGQRInmOBM8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <BR id="Bitwise">
+                    </div>
+                </div>
+        <br></div>
+        <!--   Identifier -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h2>Bitwise​ ​Operators</h2>
+                <!--   ## -->
+                <div class="box bg-light  mb-5 shadow" >
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <h2 id = 'Introduce'> Bitwise​ ​Operators </h2>
+                        <br>ตัวดำเนินการ Bitwise ทำงานบน Bit และดำเนินการแบบทีละbit ตารางความจริง สำหรับ &, |, และ ^ มีดังต่อไปนี้<br>
+                        <br>ระหว่างการคำนวณ เช่น การบวก การลบ การคูณ การหาร ฯลฯ จะถูกแปลงเป็นระดับbit ซึ่งทำให้การประมวลผลเร็วขึ้นและประหยัดพลังงาน Bitwise​ ​Operators ใช้ในการเขียนโปรแกรม C เพื่อดำเนินการระดับบิต<br>
+                        <img src="https://drive.google.com/uc?id=1_AGOnZpKzUv5v5hNPajWnEx9MLHvZax4">
+                        <br><br>
+                        <iframe width="480" height="320" src="https://www.youtube.com/embed/jlQmeyce65Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <br id="Assignment">
+                    </div>
+                </div>
+        <br></div>
+        <!--   Name Rule -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h2>Assignment​ ​Operators</h2>
+                <!--   ## -->
+                <div class="box bg-light  mb-5 shadow" >
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <h2 id = 'Introduce'> Assignment​ ​Operators </h2>
+                        <br>ตัวดำเนินการกำหนดใช้สำหรับกำหนดค่าให้กับตัวแปร Assignment​ ​Operators ที่พบบ่อยที่สุดคือ =<br>
+                        <img src="https://drive.google.com/uc?id=1-eGQxbISKJaoFGGNYkBMMDF55odQsMTW">
+                        <br>ตัวอย่าง Assignment​ ​Operators<br>
+                        <img src="https://drive.google.com/uc?id=1C__5fA1-KgZ3LVZmmu7psdJRHHbC1JMf">
+                        <br>Output<br>
+                        <img src="https://drive.google.com/uc?id=100REYZ_v2HPk2cAzb2vyYLm0HqN8d-cP">
+                        <br><br>
+                        <iframe width="480" height="320" src="https://www.youtube.com/embed/zv73Qv1GdwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <br id="Misc">
+                    </div>
+                </div>
+            </div>
+        <!--   Name Rule -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h2>Misc​ ​Operators</h2>
+                <!--   ## -->
+                <div class="box bg-light  mb-5 shadow" >
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <h2 id = 'Introduce'> Misc Operators ↦ sizeof & ternary </h2>
+                        <br>นอกจากตัวดำเนินการที่กล่าวถึงข้างต้น ยังมีตัวดำเนินการที่สำคัญอื่น ๆ อีกสองสามตัวรวมถึงsizeof และ ? :รองรับโดยภาษาซี<br>
+                        <img src="https://drive.google.com/uc?id=17U6Ay_6ZLaR4UOETMZbRKES5FoxvC0hy" width="750" height="150">
+                        <br>C program code with misc operators<br>
+                        <img src="https://drive.google.com/uc?id=1xQMObCfyuhB-CrrZ4lhP614WUq8JBpiU">
+                        <br>Output<br>
+                        <img src="https://drive.google.com/uc?id=1m8U_rGkgqWVidRE-KsPw4vtZ6nGjtISD">
+                        <br><br>
+                        <iframe width="480" height="320" src="https://www.youtube.com/embed/OgoE9C1fql8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            
+        
+        <button onclick="window.location.href='/course-Operators-quiz'" type="button" class="btn btn-outline-secondary btn-lg btn-block bg-light shadow" style="color:black" ><h2><u>แบบทดสอบย่อย</h2></u></button>
+        
+
+        
+
+        <br></div>
+        </div>
+    </div>
+
+
+    <!-- END Of MIDDLE  -->
+    </body>
+</html>
+
+

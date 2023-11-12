@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <link rel='stylesheet' href='stylesheets/chart.css' />
+    <title>Home</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+
+<br><br><br>
+    <div id = "content" class="container">
+        <h1>Student Summary Skills</h1>
+        
+        <div class="box bg-light  mb-5 shadow" >
+            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
+                
+                <div class="row mb-3 ">
+                    <h5 for="inputEmail3" class="col-sm-2 col-form-label">Basic</h5>
+                    <div class="col-sm-10 " style="top:10px">
+                        <progress  max="100" value=<%= BasicPercent %>  class="html5 "></progress>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <h5 for="inputEmail3" class="col-sm-2 col-form-label">Tracing</h5>
+                     <div class="col-sm-10 " style="top:10px">
+                      <progress  max="100" value=<%= TracePercent %>  class="html5 "></progress>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <h5 for="inputEmail3" class="col-sm-2 col-form-label">Explaining</h5>
+                     <div class="col-sm-10 " style="top:10px">
+                      <progress  max="100" value= <%= ExplainPercent %>  class="html5 "></progress>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <h5 for="inputEmail3" class="col-sm-2 col-form-label">Writing</h5>
+                     <div class="col-sm-10 " style="top:10px">
+                      <progress  max="100" value=<%= WritePercent %> class="html5 "></progress>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        <h1>Ranking</h1>
+        <div class="row">
+            <div class="col-sm">
+                <div class="box bg-light  mb-5 shadow" >
+                    <div lang="ja">
+                        <p class="wrapbox auto">
+                            <ol>
+                                <h4>แบบทดสอบที่ผู้เรียนทำคะแนนได้มากสุด</h4>
+                                <li><%= sortedCourse[0] %></li>
+                                <li><%= sortedCourse[1] %></li>
+                                <li><%= sortedCourse[2] %></li>
+                                <li><%= sortedCourse[3] %></li>
+                                <li><%= sortedCourse[4] %></li>
+                                <li><%= sortedCourse[5] %></li>
+                                <li><%= sortedCourse[6] %></li>
+                                <li><%= sortedCourse[7] %></li>
+                                <li><%= sortedCourse[8] %></li>
+                                <li><%= sortedCourse[9] %></li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="box bg-light  mb-5 shadow" >
+                    <div lang="ja">
+                        <p class="wrapbox auto">
+                            <ol>
+                                <h4>โปรเจคที่ผู้เรียนทำคะแนนได้มากสุด</h4>
+                                <li><%= sortedProject[0] %></li>
+                                <li><%= sortedProject[1] %></li>
+                                <li><%= sortedProject[2] %></li>
+                                <li><%= sortedProject[3] %></li>
+                                <li><%= sortedProject[4] %></li>
+                              </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<br>
+
+
+<script src="/javascripts/chart_teacher.js"></script>
+</body>
+
+</html>

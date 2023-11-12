@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <title>Array</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+    <!-- LEFT -->
+    <%- include('../layouts/course-list') %>
+    <!-- END OF LEFT-->
+
+    <!-- MIDDLE 1 -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .breadcrumb {
+            margin-bottom: 0;
+            background-color: white;
+            }
+        .blockquote-footer {
+            color:black;
+        }
+    </style>
+    <a id="Declaring"></a>
+    <!-- MIDDLE 1 -->
+    <div class="content">
+        <div id = "content" class="container">
+            <h1 >Array</h1>
+    <!--   C Language -->
+            <div class="accordion" id="accordionParentSyntax">
+                <!--   Token -->
+                <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                    <h2 >Declaring</h2>
+                    <!--   ## -->
+                    <div class="box bg-light  mb-5 shadow" >
+                        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                            <h2 id = ''> Learn C Programming </h2>
+                            <br>ในบทช่วยสอนนี้ คุณจะได้เรียนรู้การทำงานกับอาร์เรย์ คุณจะได้เรียนรู้วิธีประกาศ เริ่มต้น และเข้าถึงองค์ประกอบของอาร์เรย์โดยใช้ตัวอย่าง<br>
+                            <img src="https://drive.google.com/uc?id=1g-FFwOzvaL9lc14woSA63Sx55L5PMjpi">
+                            <br>อาร์เรย์เป็นตัวแปรที่สามารถเก็บค่าได้หลายค่า ตัวอย่างเช่น หากคุณต้องการเก็บจำนวนเต็ม 100 ตัว คุณสามารถสร้างอาร์เรย์ได้<br>
+                            <img src="https://drive.google.com/uc?id=1CsmeJqUu553Txh720aNm93a7uSqMswYy">
+                            <h5><br>How to declare an array?<br></h5>
+                            <img src="https://drive.google.com/uc?id=1QjH9150X9yTJdD0cpfVFGTIevP026XOB">
+                            <br>For example<br>
+                            <img src="https://drive.google.com/uc?id=1d5kE-nlgIa7f9m6YrT_YJ_OyRO_rYyyx">
+                            <br>ที่นี่เราประกาศอาร์เรย์เครื่องหมาย, ชนิดจุดลอยตัว และขนาดของมันคือ 5 ความหมาย มันสามารถเก็บค่าทศนิยมได้ 5 ค่า สิ่งสำคัญคือต้องสังเกตว่าขนาดและประเภทของอาร์เรย์ไม่สามารถเปลี่ยนแปลงได้เมื่อมีการประกาศ<br>
+                            <h5><br>Access Array Elements<br></h5>
+                            <br>เราสามารถเข้าถึงองค์ประกอบของอาร์เรย์โดยดัชนี สมมติว่าเราประกาศอาร์เรย์เครื่องหมายดังข้างต้น องค์ประกอบแรกคือ mark[0] องค์ประกอบที่สองคือ mark[1] และอื่นๆ<br>
+                            <img src="https://drive.google.com/uc?id=1Pn9lYXWGBwAmnMn2LRLXTvWKMliQpVgO">
+                            <h5><br>Few keynotes<br></h5>
+                            <br>- อาร์เรย์มี 0 เป็นดัชนีแรก ไม่ใช่ 1 ในตัวอย่างนี้ mark[0] เป็นองค์ประกอบแรก<br>
+                            <br>- ถ้าขนาดของอาร์เรย์คือนในการเข้าถึงองค์ประกอบสุดท้ายn-1ดัชนีจะถูกใช้ ในตัวอย่างนี้มาร์ค[4]<br>
+                            <br>- สมมติว่าที่อยู่เริ่มต้นของ mark[0] คือ2120d จากนั้นที่อยู่ของ mark[1]จะเป็น2124d ในทำนองเดียวกันที่อยู่ของ mark[2] จะเป็น 2128d เป็นต้นเนื่องจากขนาดของ a float คือ 4 ไบต์<br>
+                            <h5><br>How to initialize an array?<br></h5>
+                            <br>เป็นไปได้ที่จะเริ่มต้นอาร์เรย์ในระหว่างการประกาศ ตัวอย่างเช่น<br>
+                            <img src="https://drive.google.com/uc?id=1bWlphNruFAaCGArkuBr_1c_RUHMkppN7">
+                            <br>เรายังสามารถเริ่มต้นอาร์เรย์แบบนี้ได้<br>
+                            <img src="https://drive.google.com/uc?id=1Wb0t2Ujw7ibsykvFoRbaS-hLSIFfwxwg">
+                            <br>ที่นี่เรายังไม่ได้ระบุขนาด อย่างไรก็ตาม คอมไพเลอร์รู้ว่าขนาดของมันคือ 5 ในขณะที่เรากำลังเริ่มต้นมันด้วย 5 องค์ประกอบ<br>
+                            <img src="https://drive.google.com/uc?id=1bWU6vcZaPi4VZxB7DIQwCSRuG1OFsCgy">
+                            <img src="https://drive.google.com/uc?id=1sdK1WUO6uGUxEpclhNU5T1SLOLYAL01P">
+                            <h5><br>Change Value of Array elements<br></h5>
+                            <img src="https://drive.google.com/uc?id=1F4jbMpF_0CnwY95o1u_6FG1kbam10mWR">
+                            <br>นี่คือวิธีที่คุณสามารถรับข้อมูลจากผู้ใช้และเก็บไว้ในองค์ประกอบอาร์เรย์<br>
+                            <img src="https://drive.google.com/uc?id=1ujGXPz_TSJUlskxK2vcwMROITUH48LIX">
+                            <br>ต่อไปนี้คือวิธีพิมพ์องค์ประกอบแต่ละรายการของอาร์เรย์<br>
+                            <img src="https://drive.google.com/uc?id=1GFefj8WhvBh7XKS_2d4VD-VqaF-MjIyY">
+                            <br>Example 1: Array Input/Output<br>
+                            <img src="https://drive.google.com/uc?id=16XjCctgpyysHHRyIvcGuI_a-37g5mkOL">
+                            <br>Output<br>
+                            <img src="https://drive.google.com/uc?id=1e_zB6hwm-Bn4Q11B4U9RMfaLmNOX0VgR">
+                            <br>ในที่นี้เราได้ใช้การ for loop เพื่อรับ 5 อินพุตจากผู้ใช้และเก็บไว้ในอาร์เรย์ จากนั้นใช้  for loop อื่นองค์ประกอบเหล่านี้จะแสดงบนหน้าจอ<br>
+                            <br>Example 2: Calculate Average<br>
+                            <img src="https://drive.google.com/uc?id=1YHuSS3gy5eWUYDO8_-bDNPgwWk0MH1AN">
+                            <br>Output<br>
+                            <img src="https://drive.google.com/uc?id=1KICAfrIXKn4DwebmasLoK9FgN2xHc93L">
+                            <br>ที่นี่เราได้คำนวณค่าเฉลี่ยของหมายเลขที่ป้อนโดยผู้ใช้<br>
+                            <h5><br>Access elements out of its bound!<br></h5>
+                            <br>สมมติว่าเราประกาศอาร์เรย์ 10 องค์ประกอบ เอาเป็นว่า<br>
+                            <img src="https://drive.google.com/uc?id=1ceu897NQkeOVG5jnEHaFj5fVVomA-QsO">
+                            <br>เราสามารถเข้าถึงองค์ประกอบอาร์เรย์จากtestArray[0]ถึงtestArray[9].<br>
+                            <br>สมมติว่าพยายาม testArray[12] เข้าถึง ไม่มีองค์ประกอบ ซึ่งอาจทำให้เกิดผลลัพธ์ที่ไม่คาดคิด (ลักษณะการทำงานที่ไม่ได้กำหนด) บางครั้งเราอาจได้รับข้อผิดพลาดและบางครั้งโปรแกรมอาจทำงานได้อย่างถูกต้อง
+                            ดังนั้นเราไม่ควรเข้าถึงองค์ประกอบของอาร์เรย์ที่อยู่นอกขอบเขต<br>
+                            <iframe width="480" height="320" src="https://www.youtube.com/embed/Bqud0_ozgcc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <BR id="Two_Dimensional">
+                        </div>
+                    </div>
+            <br ></div>
+            <!--   Semicolons -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h2 >Two-Dimensional​ ​Arrays​</h2>
+                <!--   ## -->
+                <div class="box bg-light  mb-5 shadow" >
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <h2 id = 'Introduce'> Multidimensional Arrays </h2>
+                        <br>ในบทช่วยสอนนี้ เราจะได้เรียนรู้การทำงานกับอาร์เรย์หลายมิติ (อาร์เรย์สองมิติและสามมิติ) ด้วยความช่วยเหลือของตัวอย่าง<br>
+                        <br>ในการเขียนโปรแกรม C เราสามารถสร้างอาร์เรย์ของอาร์เรย์ได้ อาร์เรย์เหล่านี้เรียกว่าอาร์เรย์หลายมิติ ตัวอย่างเช่น<br>
+                        <img src="https://drive.google.com/uc?id=1o93Pau8AbyNONydbF6NUz6hbQsh6lMod">
+                        <br>ที่นี่,xเป็นอาร์เรย์สองมิติ (2d) อาร์เรย์สามารถเก็บ 12 องค์ประกอบ เราสามารถคิดว่าอาร์เรย์เป็นตารางที่มี 3 แถว และแต่ละแถวมี 4 คอลัมน์<br>
+                        <img src="https://drive.google.com/uc?id=1MnNToDKjNFIUSTJkTvnsEKcQKydWImjZ">
+                        <br>ในทำนองเดียวกัน เราสามารถประกาศอาร์เรย์สามมิติ (3d) ได้ ตัวอย่างเช่น<br>
+                        <img src="https://drive.google.com/uc?id=1i8lQVwdtvYibUG3toe7xAelo_N09gXuw">
+                        <br>ที่นี่อาร์เรย์yสามารถถือ 24 องค์ประกอบ<br>
+                        <h5><br>Initializing a multidimensional array<br></h5>
+                        <br>นี่คือวิธีที่เราสามารถเริ่มต้นอาร์เรย์สองมิติและสามมิติ<br>
+                        <h5><br>Initialization of a 2d array<br></h5>
+                        <img src="https://drive.google.com/uc?id=1bqJWlcHs86J4_QypPWVq90PztOTKTuam">
+                        <h5><br>Initialization of a 3d array<br></h5>
+                        <br>เราสามารถเริ่มต้นอาร์เรย์สามมิติได้ในลักษณะเดียวกับอาร์เรย์สองมิติ นี่คือตัวอย่าง<br>
+                        <img src="https://drive.google.com/uc?id=1Pqptf0wshtNlPcPWArmhGghrP2Oq6h6J">
+                        <br>Example 1: Two-dimensional array to store and print values<br>
+                        <img src="https://drive.google.com/uc?id=1Ic7LWJXr5WbYKbZcVymC7RgPsaF4CdGX">
+                        <br>Output<br>
+                        <img src="https://drive.google.com/uc?id=1zi-bbSAMQovMCcmIuLeAv8zliJj44XFJ">
+                        <br>Example 2: Sum of two matrices<br>
+                        <img src="https://drive.google.com/uc?id=1uw7ELhgS_vydVkOMTyexOBPFKN3cIIFu">
+                        <br>Output<br>
+                        <img src="https://drive.google.com/uc?id=1EOhVZnesDXo2UrmgvwXcb-5TWUDeNTVj">
+                        <br><br>
+                        <iframe width="480" height="320" src="https://www.youtube.com/embed/J1aQ9JN4vZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <BR id="Three_Dimensional​">
+                    </div>
+                </div>
+        <br></div>
+            <!--   Semicolons -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h2 >Three-Dimensional​ ​Arrays​</h2>
+                <!--   ## -->
+                <div class="box bg-light  mb-5 shadow" >
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <h2 id = 'Introduce'> Three dimensional (3D) array in C </h2>
+                        <br>อาอาร์เรย์ 3 มิติเป็นอาร์เรย์หลายมิติ (array of array) อาอาร์เรย์ 3 มิติคือคอลเลกชันของอาร์เรย์ 2 มิติ. มันถูกระบุโดยใช้ตัวห้อยสามตัว: ขนาดบล็อก ขนาดแถว และขนาดคอลัมน์ มิติข้อมูลในอาร์เรย์ที่มากขึ้นหมายความว่าสามารถจัดเก็บข้อมูลในอาร์เรย์นั้นได้มากขึ้น<br>
+                        <h5><br>Visualizing 3D array<br></h5>
+                        <br>หากเราต้องการเห็นภาพอาร์เรย์ 2 มิติเราสามารถมองเห็นได้ด้วยวิธีนี้: int arr[3][3]มันหมายถึงอาร์เรย์ 2 มิติของประเภทจำนวนเต็มที่มี 3 แถวและ 3 คอลัมน์ มันเป็นเมทริกซ์อย่างง่าย<br>
+                        <img src="https://drive.google.com/uc?id=13Dv_spextP9qbtOgw_AsnfpzVNjkI6kK">
+                        <br>แต่จะเกิดอะไรขึ้นหากเราเพิ่มมิติเข้าไปอีกมิติหนึ่ง เช่นint arr[3][3][3]ตอนนี้มันกลายเป็นอาร์เรย์ 3 มิติ<br>
+                        <br>- intแสดงว่าอาร์เรย์ 3 มิติเป็นอาร์เรย์ประเภทจำนวนเต็ม<br>
+                        <br>- arrเป็น ชื่อ ของอาร์เรย์<br>
+                        <br>- มิติแรกแสดงถึงขนาดบล็อก (จำนวนอาร์เรย์ 2 มิติทั้งหมด)<br>
+                        <br>- มิติที่ 2แทนแถวของอาร์เรย์ 2มิติ<br>
+                        <br>- มิติที่สามแสดงถึงคอลัมน์ของอาร์เรย์ 2มิติ<br>
+                        <br>เช่น; int arr[3][3][3] ดังนั้นคำสั่งบอกว่าเราต้องการอาร์เรย์ 2D สามชุดซึ่งประกอบด้วย 3 แถวและ 3 คอลัม<br>
+                        <img src="https://drive.google.com/uc?id=1ahy_-RQXaKEyMawODN9Y5ygwBiS6Fz3W">>
+                        <h5><br>Declaring a 3D array<br></h5>
+                        <br>ในการประกาศอาร์เรย์ 3 มิติ<br>
+                        <br>ระบุชนิดข้อมูล ชื่ออาร์เรย์ ขนาดบล็อก ขนาดแถว และขนาดคอลัมน์ตัวห้อยแต่ละตัวสามารถเขียนได้ภายในวงเล็บคู่ที่แยกจากกัน<br>
+                        <br>Syntax: data_type array_name[block_size][row_size][column_size];<br>
+                        <br>ตัวอย่าง:<br>
+                        <img src="https://drive.google.com/uc?id=14DBaMMYSjGzKptWB6ibz6-0cxI4XtfpP">
+                        <h5><br>Ways to declare 3D array<br></h5>
+                        <br>1). int arr[2][3][3]; ในการประกาศประเภทนี้ เรามีอาร์เรย์ประเภทจำนวนเต็ม ขนาดบล็อกคือ 2 ขนาดแถว 3 และขนาดคอลัมน์คือ 3 ในที่นี้เราไม่ได้เก็บค่า/องค์ประกอบใดๆ ในอาร์เรย์ ดังนั้นอาร์เรย์จะเก็บค่าขยะ<br>
+                        <img src="https://drive.google.com/uc?id=1QbLdXetNgxE5oO2dulLz7g9Q7eUV9DGA">
+                        <br>2). int arr[2][3][3]={};ในการประกาศประเภทนี้ เรามีอาร์เรย์ประเภทจำนวนเต็ม ขนาดบล็อกคือ 2 ขนาดแถวคือ 3 และขนาดคอลัมน์คือ 3 และเราได้ใส่เครื่องหมายปีกกาหลังตัวดำเนินการกำหนด ดังนั้นอาร์เรย์จะมีค่า 0 ในแต่ละเซลล์ของอาร์เรย์<br>
+                        <img src="https://drive.google.com/uc?id=1p8SmyXq3MEXsChcJAG6nZDEr1QOBH-lk">
+                        <br>3). int arr[3][2][2]={0,1,2,3,4,5,6,7,8,9,3,2} ในการประกาศประเภทนี้ เรามีอาร์เรย์ประเภทจำนวนเต็ม , ขนาดบล็อกคือ 3,ขนาดแถวคือ 2, ขนาดคอลัมน์คือ 2 และเราได้กล่าวถึงค่าภายในวงเล็บปีกกาในระหว่างการประกาศอาร์เรย์ ดังนั้นค่าทั้งหมดจะถูกเก็บไว้ในเซลล์อาร์เรย์ทีละตัว<br>
+                        <img src="https://drive.google.com/uc?id=1iABZ-O0Y3Gk8anfKkhQ1MP5uvXkf0v5Q">
+                        <br>4). int arr[3][3][3]={{10,20,30},{40,50,60},{70,80,90}},{{11,22,33},{44 ,55,66},{77,88,99}},{{12,23,34},{45,56,67},{78,89,90}}}; ในการประกาศประเภทนี้ เรามีอาร์เรย์ประเภทจำนวนเต็ม ขนาดบล็อก 3 ขนาดแถว 3 ขนาดคอลัมน์ 3 และค่าของแต่ละบล็อกถูกกำหนดในระหว่างการประกาศ<br>
+                        <img src="https://drive.google.com/uc?id=13IFotaqLWlRcHSrVoDMPVMiW3F8Pbn8J">
+                        <h5><br>Inserting values in 3D array<br></h5>
+                        <br>ตัวอย่างต่อไปนี้คือการนำไปใช้ในC<br>
+                        <img src="https://drive.google.com/uc?id=1yI1PBaMUq_RfsWyzs4PhxKsv1vSZfK0y">
+                        <br>Output<br>
+                        <img src="https://drive.google.com/uc?id=1Xkhx4FwOh0SWDp1aMQwoQt3Lxj7T0dfq">
+                        <br>ในโปรแกรมข้างต้น<br>
+                        <br>- เราได้ประกาศตัวแปรสามตัวi ,j,k for three for loops<br>
+                        <br>- เราได้ประกาศอาร์เรย์ประเภทจำนวนเต็มint arr[2][3][3]; (บล็อก:2 แถว:3 คอลัมน์:3)<br>
+                        <br>- ส่วนแรกของ nested for loops ขอให้ผู้ใช้แทรกค่า<br>
+                        <br>- ส่วนที่สองของการซ้อนสำหรับลูปจะพิมพ์ค่าที่แทรกในรูปแบบเมทริกซ์<br>
+                        <h5><br>Updating the 3D array<br></h5>
+                        <br>เราสามารถอัปเดตองค์ประกอบของอาร์เรย์ 3 มิติได้โดยการระบุองค์ประกอบที่จะแทนที่หรือโดยการระบุตำแหน่งที่จะต้องทำการแทนที่<br>
+                        <br>สำหรับการอัพเดตอาร์เรย์ที่เราต้องการ<br>
+                        <br>- องค์ประกอบของอาร์เรย์<br>
+                        <br>- องค์ประกอบหรือตำแหน่งที่ต้องแทรก<br>
+                        <br>- ค่าที่จะแทรก<br>
+                        <br>ตัวอย่างต่อไปนี้คือการนำไปใช้ในC<br>
+                        <img src="https://drive.google.com/uc?id=1fme3AtVAzt_K6_VMeAP8Dv-TVdUkA9xD">
+                        <br><br>
+                        <img src="https://drive.google.com/uc?id=1vxkxSfHUhW4fCN6cJws9Cn9Wocv5Pqt0">
+                        <br>Output<br>
+                        <img src="https://drive.google.com/uc?id=1HYPO2PBUJqzJ-rak26XMvhdLNaR2BZFY">
+                        <br>ในโปรแกรมข้างต้น<br>
+                        <br>- เราได้ประกาศสามตัวแปรi,j,kสำหรับสาม ตัวแปร สำหรับลูปและ ตัวแปร numซึ่งจะเก็บค่า/องค์ประกอบที่จะอัปเดต<br>
+                        <br>- เราได้ประกาศอาร์เรย์ประเภทจำนวนเต็มint arr[2][3][3]; (บล็อก:2 แถว:3 คอลัมน์:3)<br>
+                        <br>- ส่วนแรกของ nested for loops ขอให้ผู้ใช้แทรกค่า<br>
+                        <br>- ส่วนที่สองของการซ้อนสำหรับลูปจะพิมพ์ค่าที่แทรกในรูปแบบเมทริกซ์<br>
+                        <br>- ตำแหน่ง/ค่าจะได้รับการอัปเดต<br>
+                        <br>- ส่วนที่สามของ nested for loop จะพิมพ์อาร์เรย์ 3 มิติที่อัปเดต<br>
+                        <br><br>
+                        <iframe width="480" height="320" src="https://www.youtube.com/embed/9T3FhHTT2g8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+        <br></div> 
+        <button onclick="window.location.href='/course-Array-quiz'" type="button" class="btn btn-outline-secondary btn-lg btn-block bg-light shadow" style="color:black" ><h2><u>แบบทดสอบย่อย</h2></u></button>
+        
+
+        
+
+        <br></div>
+        </div>
+    </div>
+
+
+    <!-- END Of MIDDLE  -->
+    </body>
+</html>
+
+

@@ -1,0 +1,95 @@
+
+    <% 
+    if(Object.keys(StudentAnswer).length === 0) {   
+    } 
+    else {
+        %>
+        <div id = "content" class="container">
+            <h1 id = 'content'><svg height="40" width="40" viewBox="0 0 576 512">
+                <path d="M352.4 243.8l-49.83 99.5c-6.009 12-23.41 11.62-28.92-.625L216.7 216.3l-30.05 71.75L88.55 288l176.4 182.2c12.66 13.07 33.36 13.07 46.03 0l176.4-182.2l-112.1 .0052L352.4 243.8zM495.2 62.86c-54.36-46.98-137.5-38.5-187.5 13.06L288 96.25L268.3 75.92C218.3 24.36 135.2 15.88 80.81 62.86C23.37 112.5 16.84 197.6 60.18 256h105l35.93-86.25c5.508-12.88 23.66-13.12 29.54-.375l58.21 129.4l49.07-98c5.884-11.75 22.78-11.75 28.67 0l27.67 55.25h121.5C559.2 197.6 552.6 112.5 495.2 62.86z"/>
+            </svg> Score </h1>     
+            <div class="box bg-light  mb-5 shadow" >
+            <table class="table text-center">
+                <thead>
+                <tr>
+                    <th scope="col" class="col-1 text-center">ทำครั้งที่</th>
+                    <th scope="col" class="col-2 text-center">เวลา</th>
+                    <th scope="col" class="col-4 text-center">ชื่อวิชา</th>
+                    <th scope="col" class="col-1 ">ข้อที่ 1</th>
+                    <th scope="col" class="col-1 ">ข้อที่ 2</th>
+                    <th scope="col" class="col-1 ">ข้อที่ 3</th>
+                    <th scope="col" class="col-1 ">ข้อที่ 4</th>
+                    <th scope="col" class="col-1 ">ผู้ตรวจ</th>
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="text-end">
+        <%
+        for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {  
+            var Condition = 0;
+            var checkedLV1 = "✗" ,checkedLV2 = "✗",checkedLV3 = "✗",checkedLV4,TeacherCheck;
+            /* Check Content**/
+            if(StudentAnswer[i].contentName === "Pre-test" ){
+                Condition++;
+            }
+            if(StudentAnswer[i].contentName === "Post-test" ){
+                Condition++;
+            }
+            if(StudentAnswer[i].contentName === "TicTacToe" ){
+                Condition++;
+            }
+            if(StudentAnswer[i].contentName === "LibrarySystem" ){
+                Condition++;
+            } 
+            if(StudentAnswer[i].contentName === "Roshambo" ){
+                Condition++;
+            } 
+            if(StudentAnswer[i].contentName === "Calendar" ){
+                Condition++;
+            } 
+            if(StudentAnswer[i].contentName === "Calculator" ){
+                Condition++;
+            } 
+            /* Check Value LV4 Score**/
+            if(typeof(StudentAnswer[i].scoreTeacher) === "string" ){
+                checkedLV4 = StudentAnswer[i].scoreTeacher;
+                TeacherCheck = StudentAnswer[i].checkedBy;
+            }
+            else{
+                checkedLV4 = "-";
+                TeacherCheck = "รอตรวจ";
+            }
+            /* Score tranfrom to Pass/Not Pass**/
+            if(StudentAnswer[i].scoreLV1 === 10){
+                checkedLV1 = "✓";
+            }
+            if(StudentAnswer[i].scoreLV2 === 20){
+                checkedLV2 = "✓";
+            }
+            if(StudentAnswer[i].scoreLV3 === 30){
+                checkedLV3 = "✓";
+            }
+            else;
+            /* Show Only Quiz**/
+            if(Condition != 0 ){
+    
+            }else{%>
+                <th scope="row" class="text-center"><%=StudentAnswer[i].timetodo%></th>
+                <td class="text-center"><%=StudentAnswer[i].times%></td>
+                <td class="text-center"><%=StudentAnswer[i].contentName%></td>
+                <td class="text-center"><%=checkedLV1%></td>
+                <td class="text-center"><%=checkedLV2%></td>
+                <td class="text-center"><%=checkedLV3%></td>
+                <td class="text-center"><%=checkedLV4%></td>
+                <td class="text-center"><%=TeacherCheck%></td>
+                <tr>
+                <%}
+        } %>
+    
+                    </tbody>
+                </table>                    
+            
+            </div>
+        </div>
+    
+     <% } %>

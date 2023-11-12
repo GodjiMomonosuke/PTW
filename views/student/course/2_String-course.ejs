@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <title>Flowgorithm</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+    <!-- LEFT -->
+    <%- include('../layouts/course-list') %>
+    <!-- END OF LEFT-->
+
+    <!-- MIDDLE 1 -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .breadcrumb {
+            margin-bottom: 0;
+            background-color: white;
+            }
+        .blockquote-footer {
+            color:black;
+        }
+    </style>
+    <a id="String "></a>
+    <!-- MIDDLE 1 -->
+    <div class="content">
+        <div id = "content" class="container">
+            <h1>String</h1>
+    <!--   C Language -->
+            <div class="accordion" id="accordionParentSyntax">
+                <!--   Token -->
+                <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                    <h2 >String </h2>
+                    <!--   ## -->
+                    <div class="box bg-light  mb-5 shadow" >
+                        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                            <h2 id = ''>C Programming Strings</h2>
+                            <br>ในบทนี้ จะเรียนรู้เกี่ยวกับสตริงในการเขียนโปรแกรม C เรียนรู้วิธีประกาศ เริ่มต้น และใช้สำหรับการดำเนินการ I/O ต่างๆ ได้จากตัวอย่าง<br>
+                            <br>ในการเขียนโปรแกรม C สตริงคือลำดับของอักขระที่ลงท้าย ด้วยอักขระ null ตัวอย่างเช่น<br>
+                            <img src="https://drive.google.com/uc?id=1K_RjEPM-nSP5PqPTW8eTQPcCnI5oZd7y">
+                            <br>เมื่อคอมไพเลอร์พบลำดับของอักขระที่อยู่ในเครื่องหมายคำพูดคู่ คอมไพเลอร์จะผนวกอักขระ null \0 ต่อท้ายโดยค่าเริ่มต้น<br>
+                            <h4><br>How to declare a string?<br></h4>
+                            <br>วิธีประกาศสตริงมีดังนี้<br>
+                            <img src="https://drive.google.com/uc?id=1nQlH_mnciU5GF7oxIbaaE6atdj9_LvpN">
+                            <br><br>
+                            <img src="https://drive.google.com/uc?id=19yn_KOMawUVThIR_AJU_IGTVmej37YZD">
+                            <br>เราได้ประกาศสตริงที่มีความยาว 5 ตัว โดยการนับลำดับจะนับเหมือนกับ Array โดยเริ่มนับ จาก 0<br>
+                            <h4><br>How to initialize strings?<br></h4>
+                            <br>เราสามารถเริ่มต้นสตริงได้หลายวิธี<br>
+                            <img src="https://drive.google.com/uc?id=1ehTb_X96Y5HfD8CvtLohjH63f_xZXq2a">
+                            <br><br>
+                            <img src="https://drive.google.com/uc?id=1gmb0ODQYgGC6CQq2U2MMNMWmA2J15K6u">
+                            <br>ลองมาดูอีกตัวอย่าง<br>
+                            <img src="https://drive.google.com/uc?id=1qaqF922OzikKApcC7wPBse087FWqAgdK">
+                            <br>ที่นี่ เรากำลังพยายามกำหนดอักขระ 6 ตัว (อักขระตัวสุดท้ายคือ'\0') ให้กับcharอาร์เรย์ที่มีอักษร 5 ตัว สิ่งนี้ไม่ดีและไม่ควรทำเช่นนี้<br>
+                            <h4><br>Assigning Values to Strings<br></h4>
+                            <br>อาร์เรย์และสตริงเป็นพลเมืองชั้นสองใน C; พวกเขาไม่สนับสนุนผู้ดำเนินการมอบหมายเมื่อมีการประกาศ ตัวอย่างเช่น<br>
+                            <img src="https://drive.google.com/uc?id=1Ox39CyttPVFXOOovCkynZv7GVJ2bILPX">
+                            <br>หมายเหตุ:ใช้ฟังก์ชัน strcpy()เพื่อคัดลอกสตริงแทน<br>
+                            <h4><br>Read String from the user<br></h4>
+                            <br>เราสามารถใช้scanf()ฟังก์ชันเพื่ออ่านสตริงได้ฟังก์ชันscanf()จะอ่านลำดับของอักขระจนกว่าจะพบช่องว่าง (เว้นวรรค ขึ้นบรรทัดใหม่ แท็บ ฯลฯฯ)<br>
+                            <h6><br>Example 1: scanf() to read a string<br></h6>
+                            <img src="https://drive.google.com/uc?id=13NrGD-WlADLIF8E3RgNuZm2o1poTxtER">
+                            <br>Output<br>
+                            <img src="https://drive.google.com/uc?id=1hVNg8KwA_YdxUJwmCz2ABVZWuLo-BZ3Q">
+                            <br>แม้ว่า Dennis Ritchie เข้าโปรแกรมข้างต้นเท่านั้น “Dennis” ถูกเก็บไว้ในตัวแปร name เพราะมีช่องว่างหลัง Dennis
+                            สังเกตด้วยว่าเราได้ใช้รหัสชื่อแทน &name ด้วย scanf()<br>
+                            <img src="https://drive.google.com/uc?id=1eaxeGuvKrWwuy1auIAtOGTH-t7tO4tCd">
+                            <br>นี้เป็นเพราะชื่อเป็น char array และเรารู้ว่าชื่ออาร์เรย์หายไปเป็นพอยน์เตอร์ใน C ดังนั้นชื่อชี้ไป  scanf() ที่อยู่ขององค์ประกอบแรกในสตริงอยู่แล้ว ซึ่งเป็นเหตุผลที่เราไม่จำเป็นต้องใช้&<br>
+                            <h4><br>How to read a line of text?<br></h4>
+                            <br>เราสามารถใช้ fgets() ฟังก์ชันนี้เพื่ออ่านบรรทัดของสตริงได้ และเราสามารถใช้ puts() เพื่อแสดงสตริงได้<br>
+                            <h6><br>Example 2: fgets() and puts()<br></h6>
+                            <img src="https://drive.google.com/uc?id=14Bk70_NRyuuK0p70gJ8V1dkTEXz03HM_">
+                            <br>Output<br>
+                            <img src="https://drive.google.com/uc?id=1qgU5F-2Vp6v1Bo36FFCi28KnzI1EYxhL">
+                            <br>ในที่นี้เราใช้ fgets() ฟังก์ชันเพื่ออ่านสตริงจากผู้ใช้ fgets(name, sizeof(name), stdlin); // read string ผลลัพธ์เป็น sizeof(name)30 ดังนั้นเราจึงสามารถใส่อักขระได้สูงสุด 30 ตัวซึ่งเป็นขนาดของตัวแปร name ในการพิมพ์สตริงเราใช้ puts(name);.<br>
+                            <br>หมายเหตุ : ฟังก์ชัน gets() นี้ยังสามารถรับข้อมูลจากผู้ใช้ได้อีกด้วยอย่างไรก็ตาม มันถูกลบออกจากมาตรฐาน C เป็นเพราะ gets() ช่วยให้สามารถป้อนความยาวของอักขระได้ ดังนั้นอาจมี buffer ล้น<br>
+                            <h4><br>Passing Strings to Functions<br></h4>
+                            <br> สตริงสามารถส่งผ่านไปยังฟังก์ชันได้ในลักษณะเดียวกับอาร์เรย์ <br>
+                            <h6><br>Example 3: Passing string to a Function<br></h6>
+                            <img src="https://drive.google.com/uc?id=1MomS6O5iCQt_Wh7wecIUhk0D3du5ecXg">
+                            <h4><br>Strings and Pointers<br></h4>
+                            <br>เช่นเดียวกับอาร์เรย์ตัวแปร name จะหายไปเป็นพอยน์เตอร์ ดังนั้น เราสามารถใช้พอยน์เตอร์เพื่อจัดการองค์ประกอบของสตริงได้<br>
+                            <h6><br>Example 4: Strings and Pointers<br></h6>
+                            <img src="https://drive.google.com/uc?id=13uxun4ThxMKX_GrXSFTfkIYeVMcPiwYa">
+                            <br><br>
+                            <iframe width="480" height="320" src="https://www.youtube.com/embed/SEZpQLG3AZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <BR id="Semicolons">
+                        </div>
+                    </div>
+            <br ></div>
+            
+        
+        <button onclick="window.location.href='/course-String-quiz'" type="button" class="btn btn-outline-secondary btn-lg btn-block bg-light shadow" style="color:black" ><h2><u>แบบทดสอบย่อย</h2></u></button>
+        
+
+        
+
+        <br></div>
+        </div>
+    </div>
+
+
+    <!-- END Of MIDDLE  -->
+    </body>
+</html>
+
+
